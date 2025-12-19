@@ -1,0 +1,39 @@
+/* Map Preview */
+.map-preview {
+    padding: var(--spacing-xxl) 0;
+    background: linear-gradient(135deg, #ffffff 0%, var(--color-background) 100%);
+}
+
+.map-preview__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-lg);
+}
+
+.map-preview__image-wrapper {
+    width: 100%;
+    max-width: 800px;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    position: relative;
+}
+
+.map-preview__image-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(26, 35, 126, 0.1), rgba(106, 27, 77, 0.1));
+    z-index: 1;
+}
+
+.map-preview__image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+

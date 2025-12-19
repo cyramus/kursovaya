@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ЧитайФест - городской книжный фестиваль. Встречи с авторами, презентации книг, литературные дискуссии.">
+    <meta name="keywords" content="книжный фестиваль, литература, авторы, книги, ЧитайФест">
+    <title>ЧитайФест - Городской книжный фестиваль</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Lora:ital,wght@0,400;0,600;1,400&family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" role="banner">
+        <div class="container">
+            <div class="header__content">
+                <div class="logo">
+                    <h1 class="logo__text">ЧитайФест</h1>
+                    <span class="logo__subtitle">Книжный фестиваль</span>
+                </div>
+                <nav class="nav" role="navigation" aria-label="Главное меню">
+                    <button class="nav__toggle" aria-label="Открыть меню" aria-expanded="false">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul class="nav__list">
+                        <li><a href="#home" class="nav__link nav__link--active">Главная</a></li>
+                        <li><a href="../program/program.html" class="nav__link">Программа мероприятий</a></li>
+                        <li><a href="#participants" class="nav__link">Каталог участников</a></li>
+                        <li><a href="#map" class="nav__link">Карта</a></li>
+                        <li><a href="#schedule" class="nav__link">Моё расписание</a></li>
+                        <li><a href="#budget" class="nav__link">Бюджет</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home" role="region" aria-label="Главный экран">
+        <div class="hero__slider">
+            <div class="hero__slide hero__slide--active" data-slide="0">
+                <div class="hero__image-wrapper">
+                    <img src="https://storage.yandexcloud.net/moskvichmag/uploads/2022/11/ulitskaya1.jpg" 
+                         alt="Хедлайнер фестиваля" 
+                         class="hero__image"
+                         loading="lazy">
+                </div>
+                <div class="hero__content">
+                    <div class="container">
+                        <div class="hero__info">
+                            <h2 class="hero__name">Людмила Улицкая</h2>
+                            <p class="hero__role">Писательница, лауреат литературной премии</p>
+                            <p class="hero__description">Автор бестселлеров о современной жизни и человеческих отношениях</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero__slide" data-slide="1">
+                <div class="hero__image-wrapper">
+                    <img src="https://afisha.london/wp-content/uploads/2023/08/sorokintrip.png" 
+                         alt="Хедлайнер фестиваля" 
+                         class="hero__image"
+                         loading="lazy">
+                </div>
+                <div class="hero__content">
+                    <div class="container">
+                        <div class="hero__info">
+                            <h2 class="hero__name">Владимир Сорокин</h2>
+                            <p class="hero__role">Поэт и переводчик</p>
+                            <p class="hero__description">Мастер современной поэзии, чьи стихи переведены на 15 языков</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero__slide" data-slide="2">
+                <div class="hero__image-wrapper">
+                    <img src="https://www.pravmir.ru/wp-content/uploads/2022/11/signal-2022-11-14-080957_002-936x560.jpg" 
+                         alt="Хедлайнер фестиваля" 
+                         class="hero__image"
+                         loading="lazy">
+                </div>
+                <div class="hero__content">
+                    <div class="container">
+                        <div class="hero__info">
+                            <h2 class="hero__name">Майя Кучерская</h2>
+                            <p class="hero__role">Детский писатель и иллюстратор</p>
+                            <p class="hero__description">Создательница волшебных миров для детей и взрослых</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero__controls">
+            <button class="hero__control hero__control--prev" aria-label="Предыдущий слайд">‹</button>
+            <div class="hero__dots">
+                <button class="hero__dot hero__dot--active" aria-label="Слайд 1" data-slide="0"></button>
+                <button class="hero__dot" aria-label="Слайд 2" data-slide="1"></button>
+                <button class="hero__dot" aria-label="Слайд 3" data-slide="2"></button>
+            </div>
+            <button class="hero__control hero__control--next" aria-label="Следующий слайд">›</button>
+        </div>
+    </section>
+
+    <!-- Festival Info -->
+    <section class="festival-info" role="region" aria-label="Информация о фестивале">
+        <div class="container">
+            <div class="festival-info__content">
+                <div class="festival-info__dates">
+                    <time datetime="2025-09-15" class="festival-info__date">15–17 сентября 2025</time>
+                </div>
+                <div class="festival-info__location">
+                    <h2 class="festival-info__city">Тирасполь</h2>
+                    <p class="festival-info__venues">Центральная библиотека, Городской культурный центр, Драматический театр, Парк "Литературный", Книжный магазин "Чаша" (камерные встречи)</p>
+                </div>
+                <div class="festival-info__description">
+                    <p>ЧитайФест — это масштабное литературное событие, объединяющее писателей, читателей и всех, кто любит книги. В течение трёх дней вас ждут встречи с авторами, презентации новых книг, литературные дискуссии и мастер-классы. Фестиваль создаёт пространство для диалога между читателями и создателями литературы, открывая новые имена и возвращая к классике.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Block -->
+    <section class="cta-block" role="region" aria-label="Призыв к действию">
+        <div class="container">
+            <div class="cta-block__content">
+                <a href="../program/program.html" class="btn btn--primary">Посмотреть программу</a>
+                <a href="#schedule" class="btn btn--primary">Составить персональное расписание</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upcoming Events -->
+    <section class="events" id="program" role="region" aria-label="Ближайшие события">
+        <div class="container">
+            <h2 class="section-title">Ближайшие события</h2>
+            <div class="events__grid">
+                <article class="event-card">
+                    <div class="event-card__header">
+                        <span class="event-card__type">Презентация</span>
+                        <time class="event-card__time" datetime="2025-09-15T10:00">15 сентября, 10:00</time>
+                    </div>
+                    <h3 class="event-card__title">Презентация книги «Город и время»</h3>
+                    <p class="event-card__venue">📍 Городской культурный центр, Главный зал</p>
+                </article>
+                <article class="event-card">
+                    <div class="event-card__header">
+                        <span class="event-card__type">Мастер-класс</span>
+                        <time class="event-card__time" datetime="2025-09-15T14:00">15 сентября, 14:00</time>
+                    </div>
+                    <h3 class="event-card__title">Как писать для детей</h3>
+                    <p class="event-card__venue">📍 Центральная библиотека, Зал мастер-классов</p>
+                </article>
+                <article class="event-card">
+                    <div class="event-card__header">
+                        <span class="event-card__type">Дискуссия</span>
+                        <time class="event-card__time" datetime="2025-09-16T16:00">16 сентября, 16:00</time>
+                    </div>
+                    <h3 class="event-card__title">Современная поэзия: традиции и новаторство</h3>
+                    <p class="event-card__venue">📍 Драматический театр, Большая сцена</p>
+                </article>
+                <article class="event-card">
+                    <div class="event-card__header">
+                        <span class="event-card__type">Встреча с автором</span>
+                        <time class="event-card__time" datetime="2025-09-17T12:00">17 сентября, 12:00</time>
+                    </div>
+                    <h3 class="event-card__title">Автограф-сессия с популярными авторами</h3>
+                    <p class="event-card__venue">📍 Парк "Литературный", Книжная ярмарка</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Participants -->
+    <section class="participants" id="participants" role="region" aria-label="Участники фестиваля">
+        <div class="container">
+            <h2 class="section-title">Участники фестиваля</h2>
+            <div class="participants__grid">
+                <article class="participant-card">
+                    <div class="participant-card__image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop" 
+                             alt="Иван Смирнов" 
+                             class="participant-card__image"
+                             loading="lazy">
+                    </div>
+                    <div class="participant-card__content">
+                        <h3 class="participant-card__name">Иван Смирнов</h3>
+                        <p class="participant-card__genre">Историческая проза</p>
+                    </div>
+                </article>
+                <article class="participant-card">
+                    <div class="participant-card__image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop" 
+                             alt="Елена Кузнецова" 
+                             class="participant-card__image"
+                             loading="lazy">
+                    </div>
+                    <div class="participant-card__content">
+                        <h3 class="participant-card__name">Елена Кузнецова</h3>
+                        <p class="participant-card__genre">Детективная литература</p>
+                    </div>
+                </article>
+                <article class="participant-card">
+                    <div class="participant-card__image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop" 
+                             alt="Алексей Морозов" 
+                             class="participant-card__image"
+                             loading="lazy">
+                    </div>
+                    <div class="participant-card__content">
+                        <h3 class="participant-card__name">Алексей Морозов</h3>
+                        <p class="participant-card__genre">Фантастика</p>
+                    </div>
+                </article>
+                <article class="participant-card">
+                    <div class="participant-card__image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop" 
+                             alt="Ольга Новикова" 
+                             class="participant-card__image"
+                             loading="lazy">
+                    </div>
+                    <div class="participant-card__content">
+                        <h3 class="participant-card__name">Ольга Новикова</h3>
+                        <p class="participant-card__genre">Современная проза</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Preview -->
+    <section class="map-preview" id="map" role="region" aria-label="Карта площадок">
+        <div class="container">
+            <h2 class="section-title">Карта площадок</h2>
+            <div class="map-preview__content">
+                <div class="map-preview__image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?w=800&h=600&fit=crop" 
+                         alt="Карта площадок фестиваля" 
+                         class="map-preview__image"
+                         loading="lazy">
+                </div>
+                <button class="btn btn--primary btn--map">Открыть карту площадок</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <h3 class="footer__title">Контакты организаторов</h3>
+                    <p class="footer__contact">Email: <a href="mailto:info@chitayfest.ru">info@chitayfest.md</a></p>
+                    <p class="footer__contact">Телефон: <a href="tel:+79991234567">+(373) 777-245-35</a></p>
+                </div>
+                <div class="footer__section">
+                    <h3 class="footer__title">Социальные сети</h3>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-link" aria-label="ВКонтакте">VK</a>
+                        <a href="#" class="footer__social-link" aria-label="Telegram">TG</a>
+                        <a href="#" class="footer__social-link" aria-label="Instagram">IG</a>
+                    </div>
+                </div>
+                <div class="footer__section">
+                    <p class="footer__copyright">&copy; 2025 ЧитайФест. Все права защищены.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>

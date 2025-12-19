@@ -1,0 +1,49 @@
+/* Festival Info */
+.festival-info {
+    padding: var(--spacing-xxl) 0;
+    background: linear-gradient(135deg, var(--color-background) 0%, #ffffff 100%);
+}
+
+.festival-info__content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.festival-info__dates {
+    margin-bottom: var(--spacing-lg);
+}
+
+.festival-info__date {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    display: block;
+}
+
+.festival-info__city {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-sm);
+}
+
+.festival-info__venues {
+    font-size: 1.125rem;
+    color: var(--color-text-light);
+    margin-bottom: var(--spacing-lg);
+    font-style: italic;
+}
+
+.festival-info__description {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: var(--color-text);
+}
+
+.festival-info__description p {
+    margin-bottom: var(--spacing-md);
+}
+

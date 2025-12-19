@@ -1,0 +1,27 @@
+/* Main CSS File - BEM Methodology */
+
+/* Variables */
+@import url('./variables.css');
+
+/* Base Styles */
+@import url('./base.css');
+
+/* Container */
+@import url('./container.css');
+
+/* Blocks */
+@import url('./blocks/header.css');
+@import url('./blocks/logo.css');
+@import url('./blocks/nav.css');
+@import url('./blocks/btn.css');
+@import url('./blocks/hero.css');
+@import url('./blocks/festival-info.css');
+@import url('./blocks/cta-block.css');
+@import url('./blocks/section-title.css');
+@import url('./blocks/events.css');
+@import url('./blocks/event-card.css');
+@import url('./blocks/participants.css');
+@import url('./blocks/participant-card.css');
+@import url('./blocks/map-preview.css');
+@import url('./blocks/footer.css');
+@import url('./blocks/accessibility.css');

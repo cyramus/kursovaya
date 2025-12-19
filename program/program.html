@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Программа мероприятий ЧитайФест - городского книжного фестиваля. Расписание событий, встречи с авторами, презентации книг.">
+    <meta name="keywords" content="программа фестиваля, расписание, мероприятия, книги, авторы">
+    <title>Программа мероприятий - ЧитайФест</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Lora:ital,wght@0,400;0,600;1,400&family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../main/index.css">
+    <link rel="stylesheet" href="program.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      "name": "ЧитайФест - Городской книжный фестиваль",
+      "description": "Программа мероприятий городского книжного фестиваля",
+      "startDate": "2025-09-15",
+      "endDate": "2025-09-17",
+      "location": {
+        "@type": "Place",
+        "name": "Тирасполь",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Тирасполь"
+        }
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "ЧитайФест"
+      }
+    }
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" role="banner">
+        <div class="container">
+            <div class="header__content">
+                <a href="../main/index.html" class="logo">
+                    <h1 class="logo__text">ЧитайФест</h1>
+                    <span class="logo__subtitle">Книжный фестиваль</span>
+                </a>
+                <nav class="nav" role="navigation" aria-label="Главное меню">
+                    <button class="nav__toggle" aria-label="Открыть меню" aria-expanded="false">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul class="nav__list">
+                        <li><a href="../main/index.html" class="nav__link">Главная</a></li>
+                        <li><a href="program.html" class="nav__link nav__link--active">Программа мероприятий</a></li>
+                        <li><a href="../participants/participants.html" class="nav__link">Каталог участников</a></li>
+                        <li><a href="../map/map.html" class="nav__link">Карта</a></li>
+                        <li><a href="../planner/planner.html" class="nav__link">Моё расписание</a></li>
+                        <li><a href="../calculators/calculators.html" class="nav__link">Бюджет</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="program-page" role="main">
+        <div class="container">
+            <!-- Page Title -->
+            <h1 class="program-page__title">Программа мероприятий</h1>
+
+            <!-- Filters and Search -->
+            <section class="program-filters" role="search" aria-label="Фильтры и поиск">
+                <div class="program-filters__search">
+                    <label for="search-input" class="visually-hidden">Поиск мероприятий</label>
+                    <input 
+                        type="text" 
+                        id="search-input" 
+                        class="program-filters__input" 
+                        placeholder="Поиск по названию, автору или ключевым словам..."
+                        aria-label="Поиск мероприятий">
+                </div>
+
+                <div class="program-filters__controls">
+                    <div class="program-filters__group">
+                        <label for="day-filter" class="program-filters__label">День фестиваля:</label>
+                        <select id="day-filter" class="program-filters__select" aria-label="Фильтр по дню">
+                            <option value="all">Все дни</option>
+                            <option value="1">День 1 (15 сентября)</option>
+                            <option value="2">День 2 (16 сентября)</option>
+                            <option value="3">День 3 (17 сентября)</option>
+                        </select>
+                    </div>
+
+                    <div class="program-filters__group">
+                        <label for="type-filter" class="program-filters__label">Тип мероприятия:</label>
+                        <select id="type-filter" class="program-filters__select" aria-label="Фильтр по типу">
+                            <option value="all">Все типы</option>
+                            <option value="author-meeting">Встречи с авторами</option>
+                            <option value="book-presentation">Презентации книг</option>
+                            <option value="workshop">Мастер-классы</option>
+                            <option value="discussion">Дискуссии</option>
+                            <option value="children">Детские программы</option>
+                        </select>
+                    </div>
+
+                    <div class="program-filters__group">
+                        <label for="venue-filter" class="program-filters__label">Площадка:</label>
+                        <select id="venue-filter" class="program-filters__select" aria-label="Фильтр по площадке">
+                            <option value="all">Все площадки</option>
+                            <option value="Центральная библиотека">Центральная библиотека</option>
+                            <option value="Городской культурный центр">Городской культурный центр</option>
+                            <option value="Драматический театр">Драматический театр</option>
+                            <option value="Парк \"Литературный\"">Парк "Литературный"</option>
+                            <option value="Книжный магазин \"Чаша\"">Книжный магазин "Чаша"</option>
+                        </select>
+                    </div>
+
+                    <div class="program-filters__group">
+                        <label for="age-filter" class="program-filters__label">Возраст:</label>
+                        <select id="age-filter" class="program-filters__select" aria-label="Фильтр по возрасту">
+                            <option value="all">Все возрасты</option>
+                            <option value="0+">0+</option>
+                            <option value="3+">3+</option>
+                            <option value="4+">4+</option>
+                            <option value="5+">5+</option>
+                            <option value="16+">16+</option>
+                            <option value="18+">18+</option>
+                        </select>
+                    </div>
+
+                    <div class="program-filters__group">
+                        <label for="sort-filter" class="program-filters__label">Сортировка:</label>
+                        <select id="sort-filter" class="program-filters__select" aria-label="Сортировка">
+                            <option value="time">По времени</option>
+                            <option value="popularity">По популярности</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button class="btn btn--secondary program-filters__reset" id="reset-filters" aria-label="Сбросить фильтры">
+                    Сбросить фильтры
+                </button>
+            </section>
+
+            <!-- Day Tabs -->
+            <section class="program-days" role="tablist" aria-label="Дни фестиваля">
+                <button class="program-days__tab program-days__tab--active" data-day="all" role="tab" aria-selected="true" aria-controls="day-all">
+                    Все дни
+                </button>
+                <button class="program-days__tab" data-day="1" role="tab" aria-selected="false" aria-controls="day-1">
+                    День 1<br><span class="program-days__date">15 сентября</span>
+                </button>
+                <button class="program-days__tab" data-day="2" role="tab" aria-selected="false" aria-controls="day-2">
+                    День 2<br><span class="program-days__date">16 сентября</span>
+                </button>
+                <button class="program-days__tab" data-day="3" role="tab" aria-selected="false" aria-controls="day-3">
+                    День 3<br><span class="program-days__date">17 сентября</span>
+                </button>
+            </section>
+
+            <!-- Events Grid -->
+            <section class="program-events" id="events-container" role="region" aria-label="Список мероприятий">
+                <div class="program-events__grid" id="events-grid">
+                    <!-- Events will be inserted here by JavaScript -->
+                </div>
+                <div class="program-events__empty" id="empty-message" style="display: none;">
+                    <p>Мероприятия не найдены. Попробуйте изменить параметры фильтрации.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Modal Window -->
+    <div class="modal" id="event-modal" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
+        <div class="modal__overlay" id="modal-overlay"></div>
+        <div class="modal__content">
+            <button class="modal__close" id="modal-close" aria-label="Закрыть модальное окно">×</button>
+            <div class="modal__body" id="modal-body">
+                <!-- Modal content will be inserted here by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <h3 class="footer__title">Контакты организаторов</h3>
+                    <p class="footer__contact">Email: <a href="mailto:info@chitayfest.ru">info@chitayfest.md</a></p>
+                    <p class="footer__contact">Телефон: <a href="tel:+79991234567">+(373) 777-245-35</a></p>
+                </div>
+                <div class="footer__section">
+                    <h3 class="footer__title">Социальные сети</h3>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-link" aria-label="ВКонтакте">VK</a>
+                        <a href="#" class="footer__social-link" aria-label="Telegram">TG</a>
+                        <a href="#" class="footer__social-link" aria-label="Instagram">IG</a>
+                    </div>
+                </div>
+                <div class="footer__section">
+                    <p class="footer__copyright">&copy; 2025 ЧитайФест. Все права защищены.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+ 
+    <script src="program.js"></script>
+</body>
+</html>
+

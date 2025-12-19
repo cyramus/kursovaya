@@ -1,0 +1,18 @@
+/* Participants */
+.participants {
+    padding: var(--spacing-xxl) 0;
+    background-color: var(--color-white);
+}
+
+.participants__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-lg);
+}
+
+@media (min-width: 768px) {
+    .participants__grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
