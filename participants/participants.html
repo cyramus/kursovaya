@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Каталог участников ЧитайФест - писатели, поэты и издательства. Поиск по имени, жанру, книгам.">
+    <meta name="keywords" content="участники фестиваля, писатели, поэты, издательства, каталог">
+    <title>Каталог участников - ЧитайФест</title>
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Lora:ital,wght@0,400;0,600;1,400&family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../main/index.css">
+    <link rel="stylesheet" href="participants.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" role="banner">
+        <div class="container">
+            <div class="header__content">
+                <a href="../index.html" class="logo">
+                    <h1 class="logo__text">ЧитайФест</h1>
+                    <span class="logo__subtitle">Книжный фестиваль</span>
+                </a>
+                <nav class="nav" role="navigation" aria-label="Главное меню">
+                    <button class="nav__toggle" aria-label="Открыть меню" aria-expanded="false">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul class="nav__list">
+                        <li><a href="../index.html" class="nav__link">Главная</a></li>
+                        <li><a href="../program/program.html" class="nav__link">Программа мероприятий</a></li>
+                        <li><a href="participants.html" class="nav__link nav__link--active">Каталог участников</a></li>
+                        <li><a href="../map/map.html" class="nav__link">Карта</a></li>
+                        <li><a href="../planner/planner.html" class="nav__link">Планировщик визита</a></li>
+                        <li><a href="../about/about.html" class="nav__link">О нас</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="participants-page" role="main">
+        <div class="container">
+            <!-- Page Title -->
+            <h1 class="participants-page__title">
+                <span class="participants-page__title-decoration">❦</span>
+                Каталог участников
+                <span class="participants-page__title-decoration">❦</span>
+            </h1>
+
+            <!-- Search -->
+            <section class="participants-search" role="search" aria-label="Поиск участников">
+                <div class="participants-search__wrapper">
+                    <label for="search-input" class="visually-hidden">Поиск участников</label>
+                    <input 
+                        type="text" 
+                        id="search-input" 
+                        class="participants-search__input" 
+                        placeholder="Поиск по имени, названию книги, жанру..."
+                        aria-label="Поиск участников">
+                </div>
+            </section>
+
+            <!-- Filters and Sort -->
+            <section class="participants-filters" role="region" aria-label="Фильтры и сортировка">
+                <div class="participants-filters__controls">
+                    <!-- Type Filter -->
+                    <div class="participants-filters__group">
+                        <fieldset class="participants-filters__fieldset">
+                            <legend class="participants-filters__legend">Тип участника:</legend>
+                            <div class="participants-filters__radio-group">
+                                <label class="participants-filters__radio-label">
+                                    <input type="radio" name="type-filter" value="all" class="participants-filters__radio" checked>
+                                    <span>Все</span>
+                                </label>
+                                <label class="participants-filters__radio-label">
+                                    <input type="radio" name="type-filter" value="writer" class="participants-filters__radio">
+                                    <span>Писатели и поэты</span>
+                                </label>
+                                <label class="participants-filters__radio-label">
+                                    <input type="radio" name="type-filter" value="publisher" class="participants-filters__radio">
+                                    <span>Издательства</span>
+                                </label>
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <!-- Genre Filter (for writers) -->
+                    <div class="participants-filters__group" id="genre-filter-group">
+                        <label for="genre-filter" class="participants-filters__label">Жанр:</label>
+                        <select id="genre-filter" class="participants-filters__select" aria-label="Фильтр по жанру">
+                            <option value="all">Все жанры</option>
+                        </select>
+                    </div>
+
+                    <!-- Alphabet Sort -->
+                    <div class="participants-filters__group">
+                        <label for="alphabet-sort" class="participants-filters__label">Сортировка:</label>
+                        <select id="alphabet-sort" class="participants-filters__select" aria-label="Сортировка по алфавиту">
+                            <option value="az">А-Я</option>
+                            <option value="za">Я-А</option>
+                            <option value="type">По типу</option>
+                        </select>
+                    </div>
+
+                    <!-- Reset Button -->
+                    <button class="btn btn--secondary participants-filters__reset" id="reset-filters" aria-label="Сбросить фильтры">
+                        Сбросить фильтры
+                    </button>
+                </div>
+            </section>
+
+            <!-- Participants Grid -->
+            <section class="participants-grid" id="participants-container" role="region" aria-label="Список участников">
+                <div class="participants-grid__wrapper" id="participants-grid">
+                    <!-- Participants will be inserted here by JavaScript -->
+                </div>
+                <div class="participants-grid__empty" id="empty-message" style="display: none;">
+                    <p>Участники не найдены. Попробуйте изменить параметры фильтрации.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Modal Window -->
+    <div class="modal" id="participant-modal" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
+        <div class="modal__overlay" id="modal-overlay"></div>
+        <div class="modal__content modal__content--participant">
+            <button class="modal__close" id="modal-close" aria-label="Закрыть модальное окно">×</button>
+            <div class="modal__body" id="modal-body">
+                <!-- Modal content will be inserted here by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <h3 class="footer__title">Контакты организаторов</h3>
+                    <p class="footer__contact">Email: <a href="mailto:info@chitayfest.ru">info@chitayfest.md</a></p>
+                    <p class="footer__contact">Телефон: <a href="tel:+79991234567">+(373) 777-245-35</a></p>
+                </div>
+                <div class="footer__section">
+                    <h3 class="footer__title">Социальные сети</h3>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-link" aria-label="ВКонтакте">VK</a>
+                        <a href="#" class="footer__social-link" aria-label="Telegram">TG</a>
+                        <a href="#" class="footer__social-link" aria-label="Instagram">IG</a>
+                    </div>
+                </div>
+                <div class="footer__section">
+                    <p class="footer__copyright">&copy; 2026 ЧитайФест. Все права защищены.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../main/script.js"></script>
+    <script src="participants.js"></script>
+</body>
+</html>
+

@@ -24,6 +24,7 @@
     background-color: var(--color-white);
     padding: var(--spacing-md);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    align-items: center;
 }
 
 .nav__list--open {
@@ -36,6 +37,7 @@
     padding: var(--spacing-xs) 0;
     position: relative;
     display: block;
+    text-align: center;
 }
 
 .nav__link::after {
@@ -74,6 +76,8 @@
         padding: 0;
         box-shadow: none;
         gap: var(--spacing-md);
+        justify-content: center;
+        align-items: center;
     }
 
     .btn--header {

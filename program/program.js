@@ -1,439 +1,5 @@
 // Program Page JavaScript
 
-// Встроенные данные мероприятий
-const EVENTS_DATA = {
-  "events": [
-    {
-      "id": 1,
-      "title": "Встреча с Анной Петровой",
-      "type": "author-meeting",
-      "typeLabel": "Встреча с автором",
-      "day": 1,
-      "startTime": "10:00",
-      "endTime": "11:30",
-      "venue": "Городской культурный центр, Главный зал",
-      "ageRestriction": "16+",
-      "description": "Анна Петрова расскажет о своём творческом пути, поделится секретами писательского мастерства и ответит на вопросы читателей. Встреча будет посвящена её новому роману «Город и время».",
-      "participants": [
-        {
-          "name": "Анна Петрова",
-          "role": "Писательница, лауреат литературной премии"
-        }
-      ],
-      "genre": "Современная проза",
-      "capacity": 200,
-      "price": "Бесплатно",
-      "popularity": 0
-    },
-    {
-      "id": 2,
-      "title": "Презентация книги «Город и время»",
-      "type": "book-presentation",
-      "typeLabel": "Презентация книги",
-      "day": 1,
-      "startTime": "12:00",
-      "endTime": "13:00",
-      "venue": "Центральная библиотека, Читальный зал",
-      "ageRestriction": "16+",
-      "description": "Официальная презентация нового романа Анны Петровой «Город и время». Автор расскажет о процессе создания книги, её героях и идеях.",
-      "participants": [
-        {
-          "name": "Анна Петрова",
-          "role": "Автор книги"
-        },
-        {
-          "name": "Иван Смирнов",
-          "role": "Литературный критик"
-        }
-      ],
-      "genre": "Современная проза",
-      "capacity": 150,
-      "price": "Бесплатно",
-      "popularity": 0
-    },
-    {
-      "id": 3,
-      "title": "Мастер-класс «Как писать для детей»",
-      "type": "workshop",
-      "typeLabel": "Мастер-класс",
-      "day": 1,
-      "startTime": "14:00",
-      "endTime": "16:00",
-      "venue": "Центральная библиотека, Зал мастер-классов",
-      "ageRestriction": "18+",
-      "description": "Практический мастер-класс для начинающих детских писателей. Участники узнают о специфике детской литературы, работе с редакторами и издательствами.",
-      "participants": [
-        {
-          "name": "Мария Волкова",
-          "role": "Детский писатель и иллюстратор"
-        }
-      ],
-      "genre": "Детская литература",
-      "capacity": 50,
-      "price": "500 руб.",
-      "popularity": 0
-    },
-    {
-      "id": 4,
-      "title": "Дискуссия «Современная поэзия: традиции и новаторство»",
-      "type": "discussion",
-      "typeLabel": "Дискуссия",
-      "day": 1,
-      "startTime": "16:00",
-      "endTime": "17:30",
-      "venue": "Драматический театр, Большая сцена",
-      "ageRestriction": "16+",
-      "description": "Живая дискуссия о современной поэзии с участием известных поэтов и критиков. Обсуждение актуальных тенденций, влияния классики и новых форм выражения.",
-      "participants": [
-        {
-          "name": "Дмитрий Соколов",
-          "role": "Поэт и переводчик"
-        },
-        {
-          "name": "Елена Кузнецова",
-          "role": "Литературный критик"
-        },
-        {
-          "name": "Алексей Морозов",
-          "role": "Поэт"
-        }
-      ],
-      "genre": "Поэзия",
-      "capacity": 300,
-      "price": "Бесплатно",
-      "popularity": 0
-    },
-    {
-      "id": 5,
-      "title": "Детская программа «Сказки на ночь»",
-      "type": "children",
-      "typeLabel": "Детская программа",
-      "day": 1,
-      "startTime": "18:00",
-      "endTime": "19:00",
-      "venue": "Парк \"Литературный\", Детская площадка",
-      "ageRestriction": "3+",
-      "description": "Интерактивное чтение сказок для детей. Мария Волкова прочитает отрывки из своих книг, проведёт викторину и раздаст автографы.",
-      "participants": [
-        {
-          "name": "Мария Волкова",
-          "role": "Детский писатель"
-        }
-      ],
-      "genre": "Детская литература",
-      "capacity": 100,
-      "price": "Бесплатно",
-      "popularity": 0
-    },
-    {
-      "id": 6,
-      "title": "Встреча с Иваном Смирновым",
-      "type": "author-meeting",
-      "typeLabel": "Встреча с автором",
-      "day": 2,
-      "startTime": "10:00",
-      "endTime": "11:30",
-      "venue": "Драматический театр, Большая сцена",
-      "ageRestriction": "16+",
-      "description": "Встреча с автором исторических романов. Иван Смирнов расскажет о работе с историческими источниками и создании достоверных персонажей.",
-      "participants": [
-        {
-          "name": "Иван Смирнов",
-          "role": "Писатель, историческая проза"
-        }
-      ],
-      "genre": "Историческая проза",
-      "capacity": 250,
-      "price": "Бесплатно",
-      "popularity": 0
-    },
-    {
-      "id": 7,
-      "title": "Презентация детективной серии",
-      "type": "book-presentation",
-      "typeLabel": "Презентация книги",
-      "day": 2,
-      "startTime": "12:00",
-      "endTime": "13:00",
-      "venue": "Центральная библиотека, Конференц-зал",
-      "ageRestriction": "18+",
-      "description": "Презентация новой детективной серии Елены Кузнецовой. Автор расскажет о создании интригующих сюжетов и работе над характерами героев.",
-      "participants": [
-        {
-          "name": "Елена Кузнецова",
-          "role": "Автор детективов"
-        }
-      ],
-      "genre": "Детективная литература",
-      "capacity": 120,
-      "price": "Бесплатно",
-      "popularity": 0
-    },
-    {
-      "id": 8,
-      "title": "Мастер-класс «Создание фантастических миров»",
-      "type": "workshop",
-      "typeLabel": "Мастер-класс",
-      "day": 2,
-      "startTime": "14:00",
-      "endTime": "16:00",
-      "venue": "Драматический театр, Малый зал",
-      "ageRestriction": "16+",
-      "description": "Практический мастер-класс по созданию фантастических вселенных. Участники научатся строить логичные миры, разрабатывать магические системы и создавать убедительных персонажей.",
-      "participants": [
-        {
-          "name": "Алексей Морозов",
-          "role": "Писатель-фантаст"
-        }
-      ],
-      "genre": "Фантастика",
-      "capacity": 40,
-      "price": "600 руб.",
-      "popularity": 0
-    },
-    {
-      "id": 9,
-      "title": "Дискуссия «Женская проза в современной литературе»",
-      "type": "discussion",
-      "typeLabel": "Дискуссия",
-      "day": 2,
-      "startTime": "16:00",
-      "endTime": "17:30",
-      "venue": "Центральная библиотека, Читальный зал",
-      "ageRestriction": "16+",
-      "description": "Обсуждение места женской прозы в современной литературе. Участники поговорят о темах, стилях и влиянии женского взгляда на литературный процесс.",
-      "participants": [
-        {
-          "name": "Анна Петрова",
-          "role": "Писательница"
-        },
-        {
-          "name": "Елена Кузнецова",
-          "role": "Писательница"
-        },
-        {
-          "name": "Ольга Новикова",
-          "role": "Писательница, критик"
-        }
-      ],
-      "genre": "Современная проза",
-      "capacity": 180,
-      "price": "Бесплатно",
-      "popularity": 0
-    },
-    {
-      "id": 10,
-      "title": "Детская программа «Рисуем сказку»",
-      "type": "children",
-      "typeLabel": "Детская программа",
-      "day": 2,
-      "startTime": "18:00",
-      "endTime": "19:30",
-      "venue": "Парк \"Литературный\", Детская площадка",
-      "ageRestriction": "5+",
-      "description": "Мастер-класс по иллюстрации для детей. Мария Волкова научит детей создавать иллюстрации к сказкам и расскажет о работе иллюстратора.",
-      "participants": [
-        {
-          "name": "Мария Волкова",
-          "role": "Иллюстратор и писатель"
-        }
-      ],
-      "genre": "Детская литература",
-      "capacity": 80,
-      "price": "300 руб.",
-      "popularity": 0
-    },
-    {
-      "id": 11,
-      "title": "Встреча с Ольгой Новиковой",
-      "type": "author-meeting",
-      "typeLabel": "Встреча с автором",
-      "day": 3,
-      "startTime": "10:00",
-      "endTime": "11:30",
-      "venue": "Центральная библиотека, Читальный зал",
-      "ageRestriction": "16+",
-      "description": "Встреча с автором современной прозы. Ольга Новикова расскажет о своих произведениях, работе над стилем и влиянии современности на литературу.",
-      "participants": [
-        {
-          "name": "Ольга Новикова",
-          "role": "Писательница, современная проза"
-        }
-      ],
-      "genre": "Современная проза",
-      "capacity": 150,
-      "price": "Бесплатно",
-      "popularity": 0
-    },
-    {
-      "id": 12,
-      "title": "Презентация фантастической трилогии",
-      "type": "book-presentation",
-      "typeLabel": "Презентация книги",
-      "day": 3,
-      "startTime": "12:00",
-      "endTime": "13:00",
-      "venue": "Драматический театр, Большая сцена",
-      "ageRestriction": "16+",
-      "description": "Презентация завершающей книги фантастической трилогии Алексея Морозова. Автор расскажет о создании масштабного произведения и планах на будущее.",
-      "participants": [
-        {
-          "name": "Алексей Морозов",
-          "role": "Автор фантастики"
-        }
-      ],
-      "genre": "Фантастика",
-      "capacity": 300,
-      "price": "Бесплатно",
-      "popularity": 0
-    },
-    {
-      "id": 13,
-      "title": "Мастер-класс «Секреты детективного сюжета»",
-      "type": "workshop",
-      "typeLabel": "Мастер-класс",
-      "day": 3,
-      "startTime": "14:00",
-      "endTime": "16:00",
-      "venue": "Центральная библиотека, Зал мастер-классов",
-      "ageRestriction": "18+",
-      "description": "Практический мастер-класс по созданию детективных сюжетов. Участники научатся строить интригу, создавать подозреваемых и раскрывать тайны.",
-      "participants": [
-        {
-          "name": "Елена Кузнецова",
-          "role": "Автор детективов"
-        }
-      ],
-      "genre": "Детективная литература",
-      "capacity": 45,
-      "price": "700 руб.",
-      "popularity": 0
-    },
-    {
-      "id": 14,
-      "title": "Дискуссия «Историческая проза: факт и вымысел»",
-      "type": "discussion",
-      "typeLabel": "Дискуссия",
-      "day": 3,
-      "startTime": "16:00",
-      "endTime": "17:30",
-      "venue": "Драматический театр, Большая сцена",
-      "ageRestriction": "16+",
-      "description": "Обсуждение баланса между исторической достоверностью и художественным вымыслом в исторической прозе. Участники поделятся опытом работы с источниками.",
-      "participants": [
-        {
-          "name": "Иван Смирнов",
-          "role": "Автор исторической прозы"
-        },
-        {
-          "name": "Анна Петрова",
-          "role": "Писательница"
-        }
-      ],
-      "genre": "Историческая проза",
-      "capacity": 250,
-      "price": "Бесплатно",
-      "popularity": 0
-    },
-    {
-      "id": 15,
-      "title": "Детская программа «Читаем вместе»",
-      "type": "children",
-      "typeLabel": "Детская программа",
-      "day": 3,
-      "startTime": "18:00",
-      "endTime": "19:00",
-      "venue": "Парк \"Литературный\", Детская площадка",
-      "ageRestriction": "4+",
-      "description": "Семейное чтение с участием родителей и детей. Мария Волкова проведёт интерактивное чтение и обсуждение детских книг.",
-      "participants": [
-        {
-          "name": "Мария Волкова",
-          "role": "Детский писатель"
-        }
-      ],
-      "genre": "Детская литература",
-      "capacity": 120,
-      "price": "Бесплатно",
-      "popularity": 0
-    },
-    {
-      "id": 16,
-      "title": "Автограф-сессия с популярными авторами",
-      "type": "author-meeting",
-      "typeLabel": "Встреча с автором",
-      "day": 3,
-      "startTime": "19:00",
-      "endTime": "20:00",
-      "venue": "Парк \"Литературный\", Книжная ярмарка",
-      "ageRestriction": "0+",
-      "description": "Большая автограф-сессия с участием всех авторов фестиваля. Возможность получить автограф и пообщаться с любимыми писателями.",
-      "participants": [
-        {
-          "name": "Анна Петрова",
-          "role": "Писательница"
-        },
-        {
-          "name": "Дмитрий Соколов",
-          "role": "Поэт"
-        },
-        {
-          "name": "Мария Волкова",
-          "role": "Детский писатель"
-        }
-      ],
-      "genre": "Разное",
-      "capacity": 500,
-      "price": "Бесплатно",
-      "popularity": 0
-    },
-    {
-      "id": 17,
-      "title": "Камерная встреча с Дмитрием Соколовым",
-      "type": "author-meeting",
-      "typeLabel": "Встреча с автором",
-      "day": 1,
-      "startTime": "19:30",
-      "endTime": "20:30",
-      "venue": "Книжный магазин \"Чаша\"",
-      "ageRestriction": "16+",
-      "description": "Интимная встреча с поэтом Дмитрием Соколовым в уютной атмосфере книжного магазина. Чтение стихов, обсуждение творчества и возможность задать вопросы.",
-      "participants": [
-        {
-          "name": "Дмитрий Соколов",
-          "role": "Поэт и переводчик"
-        }
-      ],
-      "genre": "Поэзия",
-      "capacity": 25,
-      "price": "Бесплатно",
-      "popularity": 0
-    },
-    {
-      "id": 18,
-      "title": "Камерная встреча с Ольгой Новиковой",
-      "type": "author-meeting",
-      "typeLabel": "Встреча с автором",
-      "day": 2,
-      "startTime": "19:30",
-      "endTime": "20:30",
-      "venue": "Книжный магазин \"Чаша\"",
-      "ageRestriction": "18+",
-      "description": "Неформальная встреча с писательницей Ольгой Новиковой. Обсуждение современной прозы, творческого процесса и литературных тенденций.",
-      "participants": [
-        {
-          "name": "Ольга Новикова",
-          "role": "Писательница, современная проза"
-        }
-      ],
-      "genre": "Современная проза",
-      "capacity": 25,
-      "price": "Бесплатно",
-      "popularity": 0
-    }
-  ]
-};
-
 class ProgramPage {
     constructor() {
         this.events = [];
@@ -451,16 +17,15 @@ class ProgramPage {
         this.init();
     }
 
-    init() {
+    async init() {
         console.log('Инициализация ProgramPage...');
-        console.log('EVENTS_DATA доступна:', typeof EVENTS_DATA !== 'undefined');
         
         // Загружаем события
-        this.loadEvents();
+        await this.loadEvents();
         
         // Проверяем, что данные загружены
         if (this.events.length === 0) {
-            console.error('События не загружены! Проверьте EVENTS_DATA.');
+            console.error('События не загружены! Проверьте ../data/events.json.');
             return;
         }
         
@@ -475,22 +40,31 @@ class ProgramPage {
         
         // Отображаем события после загрузки
         this.renderEvents();
+        
+        // Слушаем изменения в localStorage для обновления счетчика
+        this.setupStorageListener();
     }
 
-    loadEvents() {
+    async loadEvents() {
         try {
-            // Используем встроенные данные вместо fetch
-            if (!EVENTS_DATA || !EVENTS_DATA.events) {
-                console.error('EVENTS_DATA не определена или пуста!');
+            const response = await fetch('../data/events.json');
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            
+            const data = await response.json();
+            
+            if (!data || !data.events) {
+                console.error('Данные в ../data/events.json не найдены или пусты!');
                 this.events = [];
                 this.filteredEvents = [];
                 return;
             }
             
-            console.log('EVENTS_DATA.events:', EVENTS_DATA.events);
-            console.log('Количество событий в EVENTS_DATA:', EVENTS_DATA.events.length);
+            console.log('Данные загружены из ../data/events.json');
+            console.log('Количество событий:', data.events.length);
             
-            this.events = EVENTS_DATA.events;
+            this.events = data.events;
             this.filteredEvents = [...this.events];
             
             console.log('Загружено событий:', this.events.length);
@@ -510,34 +84,70 @@ class ProgramPage {
     }
 
     loadPopularity() {
-        const saved = localStorage.getItem('eventPopularity');
-        if (saved) {
-            const popularity = JSON.parse(saved);
-            this.events.forEach(event => {
-                if (popularity[event.id]) {
-                    event.popularity = popularity[event.id];
-                }
-            });
-        }
+        // Счетчик теперь основан на реальном количестве добавлений в планировщике
+        this.updatePopularityFromSchedule();
     }
 
-    savePopularity() {
-        const popularity = {};
-        this.events.forEach(event => {
-            if (event.popularity > 0) {
-                popularity[event.id] = event.popularity;
+    updatePopularityFromSchedule() {
+        // Получаем расписание из localStorage
+        const schedule = JSON.parse(localStorage.getItem('personalSchedule') || '[]');
+        
+        // Подсчитываем количество добавлений каждого мероприятия
+        const popularityCount = {};
+        schedule.forEach(event => {
+            if (event.id) {
+                popularityCount[event.id] = (popularityCount[event.id] || 0) + 1;
             }
         });
-        localStorage.setItem('eventPopularity', JSON.stringify(popularity));
+        
+        // Обновляем популярность для каждого мероприятия
+        this.events.forEach(event => {
+            event.popularity = popularityCount[event.id] || 0;
+        });
+        
+        // Обновляем отображение всех счетчиков
+        this.updateAllPopularityDisplays();
     }
 
-    incrementPopularity(eventId) {
+    updateAllPopularityDisplays() {
+        this.events.forEach(event => {
+            this.updatePopularityDisplay(event.id);
+        });
+    }
+
+    updatePopularityDisplay(eventId) {
         const event = this.events.find(e => e.id === eventId);
-        if (event) {
-            event.popularity = (event.popularity || 0) + 1;
-            this.savePopularity();
-            this.renderEvents();
+        if (!event) return;
+
+        const card = document.querySelector(`.event-card[data-id="${eventId}"]`);
+        if (card) {
+            const popularityEl = card.querySelector('.event-card__popularity');
+            if (popularityEl) {
+                const count = event.popularity || 0;
+                popularityEl.innerHTML = `<span>❤️</span> ${count}`;
+            }
         }
+    }
+
+    setupStorageListener() {
+        // Слушаем изменения в localStorage (когда планировщик обновляется в другой вкладке)
+        window.addEventListener('storage', (e) => {
+            if (e.key === 'personalSchedule') {
+                this.updatePopularityFromSchedule();
+            }
+        });
+
+        // Обновляем счетчики при фокусе на странице (когда пользователь возвращается с планировщика)
+        window.addEventListener('focus', () => {
+            this.updatePopularityFromSchedule();
+        });
+
+        // Также обновляем при видимости страницы
+        document.addEventListener('visibilitychange', () => {
+            if (!document.hidden) {
+                this.updatePopularityFromSchedule();
+            }
+        });
     }
 
     setupEventListeners() {
@@ -807,6 +417,9 @@ class ProgramPage {
             } else {
                 console.log('Успешно создано элементов:', grid.children.length);
             }
+            
+            // Обновляем счетчики популярности после рендеринга
+            this.updateAllPopularityDisplays();
         } catch (error) {
             console.error('Ошибка рендеринга событий:', error);
         }
@@ -831,7 +444,7 @@ class ProgramPage {
                 <h2 class="event-card__title" itemprop="name">${event.title}</h2>
                 <div class="event-card__time">
                     <span class="event-card__day">${dayLabels[event.day]}</span>
-                    <time datetime="2025-09-${14 + event.day}T${event.startTime}" itemprop="startDate">
+                    <time datetime="2026-09-${14 + event.day}T${event.startTime}" itemprop="startDate">
                         ${event.startTime}–${event.endTime}
                     </time>
                 </div>
@@ -906,7 +519,7 @@ class ProgramPage {
                 </div>
                 <div class="modal__info-item">
                     <span class="modal__info-label">Время</span>
-                    <time class="modal__info-value" datetime="2025-09-${14 + event.day}T${event.startTime}" itemprop="startDate">
+                    <time class="modal__info-value" datetime="2026-09-${14 + event.day}T${event.startTime}" itemprop="startDate">
                         ${event.startTime}–${event.endTime}
                     </time>
                 </div>
@@ -977,18 +590,12 @@ class ProgramPage {
         // Get current schedule from localStorage
         let schedule = JSON.parse(localStorage.getItem('personalSchedule') || '[]');
         
-        // Check if event already in schedule
-        if (schedule.some(e => e.id === eventId)) {
-            alert('Это мероприятие уже добавлено в ваше расписание!');
-            return;
-        }
-
-        // Add event to schedule
+        // Add event to schedule (разрешаем добавлять несколько раз)
         schedule.push(event);
         localStorage.setItem('personalSchedule', JSON.stringify(schedule));
 
-        // Increment popularity
-        this.incrementPopularity(eventId);
+        // Обновляем счетчик популярности на основе реального количества в расписании
+        this.updatePopularityFromSchedule();
 
         // Show success message
         alert(`"${event.title}" добавлено в ваше расписание!`);
@@ -998,7 +605,6 @@ class ProgramPage {
 // Initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
     console.log('DOM готов, инициализируем ProgramPage...');
-    console.log('EVENTS_DATA доступна:', typeof EVENTS_DATA !== 'undefined');
     
     // Проверяем наличие элемента events-grid
     const grid = document.getElementById('events-grid');
@@ -1009,18 +615,9 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('Элемент events-grid найден:', grid);
     }
     
-    if (typeof EVENTS_DATA !== 'undefined' && EVENTS_DATA.events) {
-        console.log('Количество событий в EVENTS_DATA:', EVENTS_DATA.events.length);
-        console.log('Первое событие:', EVENTS_DATA.events[0]);
-    } else {
-        console.error('EVENTS_DATA не определена или пуста!');
-    }
-    
     try {
         const programPage = new ProgramPage();
         console.log('ProgramPage создан:', programPage);
-        console.log('События в ProgramPage:', programPage.events.length);
-        console.log('Отфильтрованные события:', programPage.filteredEvents.length);
     } catch (error) {
         console.error('Ошибка при инициализации ProgramPage:', error);
         console.error('Стек ошибки:', error.stack);

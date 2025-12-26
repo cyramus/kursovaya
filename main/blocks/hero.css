@@ -57,10 +57,11 @@
     text-align: center;
     color: var(--color-white);
     padding: var(--spacing-md);
-    background: rgba(26, 35, 126, 0.7);
+    background: rgba(0, 0, 0, 0.1);
+    border: 2px solid var(--color-white);
     border-radius: var(--border-radius);
-    backdrop-filter: blur(10px);
     max-width: 600px;
+    backdrop-filter: blur(0px);
 }
 
 .hero__name {

@@ -1,0 +1,74 @@
+{
+  "distances": [
+    {
+      "from": "library",
+      "fromName": "Центральная библиотека",
+      "to": "cultural-center",
+      "toName": "Городской культурный центр",
+      "time": 5
+    },
+    {
+      "from": "library",
+      "fromName": "Центральная библиотека",
+      "to": "theater",
+      "toName": "Драматический театр",
+      "time": 10
+    },
+    {
+      "from": "library",
+      "fromName": "Центральная библиотека",
+      "to": "park",
+      "toName": "Парк «Литературный»",
+      "time": 8
+    },
+    {
+      "from": "library",
+      "fromName": "Центральная библиотека",
+      "to": "bookstore",
+      "toName": "Книжный магазин «Чаша»",
+      "time": 6
+    },
+    {
+      "from": "cultural-center",
+      "fromName": "Городской культурный центр",
+      "to": "theater",
+      "toName": "Драматический театр",
+      "time": 12
+    },
+    {
+      "from": "cultural-center",
+      "fromName": "Городской культурный центр",
+      "to": "park",
+      "toName": "Парк «Литературный»",
+      "time": 7
+    },
+    {
+      "from": "cultural-center",
+      "fromName": "Городской культурный центр",
+      "to": "bookstore",
+      "toName": "Книжный магазин «Чаша»",
+      "time": 4
+    },
+    {
+      "from": "theater",
+      "fromName": "Драматический театр",
+      "to": "park",
+      "toName": "Парк «Литературный»",
+      "time": 9
+    },
+    {
+      "from": "theater",
+      "fromName": "Драматический театр",
+      "to": "bookstore",
+      "toName": "Книжный магазин «Чаша»",
+      "time": 5
+    },
+    {
+      "from": "park",
+      "fromName": "Парк «Литературный»",
+      "to": "bookstore",
+      "toName": "Книжный магазин «Чаша»",
+      "time": 15
+    }
+  ]
+}

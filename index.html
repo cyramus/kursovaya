@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Lora:ital,wght@0,400;0,600;1,400&family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="main/index.css">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <!-- Header -->
@@ -29,10 +30,10 @@
                     <ul class="nav__list">
                         <li><a href="#home" class="nav__link nav__link--active">Главная</a></li>
                         <li><a href="program/program.html" class="nav__link">Программа мероприятий</a></li>
-                        <li><a href="#participants" class="nav__link">Каталог участников</a></li>
-                        <li><a href="#map" class="nav__link">Карта</a></li>
-                        <li><a href="#schedule" class="nav__link">Моё расписание</a></li>
-                        <li><a href="#budget" class="nav__link">Бюджет</a></li>
+                        <li><a href="participants/participants.html" class="nav__link">Каталог участников</a></li>
+                        <li><a href="map/map.html" class="nav__link">Карта</a></li>
+                        <li><a href="planner/planner.html" class="nav__link">Планировщик визита</a></li>
+                        <li><a href="about/about.html" class="nav__link">О нас</a></li>
                     </ul>
                 </nav>
             </div>
@@ -105,12 +106,39 @@
         </div>
     </section>
 
+    <!-- Countdown Timer -->
+    <section class="countdown" role="region" aria-label="Таймер обратного отсчета">
+        <div class="container">
+            <div class="countdown__content">
+                <h2 class="countdown__title">До начала фестиваля осталось:</h2>
+                <div class="countdown__timer" id="countdown-timer">
+                    <div class="countdown__item">
+                        <span class="countdown__number" id="days">00</span>
+                        <span class="countdown__label">дней</span>
+                    </div>
+                    <div class="countdown__item">
+                        <span class="countdown__number" id="hours">00</span>
+                        <span class="countdown__label">часов</span>
+                    </div>
+                    <div class="countdown__item">
+                        <span class="countdown__number" id="minutes">00</span>
+                        <span class="countdown__label">минут</span>
+                    </div>
+                    <div class="countdown__item">
+                        <span class="countdown__number" id="seconds">00</span>
+                        <span class="countdown__label">секунд</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Festival Info -->
     <section class="festival-info" role="region" aria-label="Информация о фестивале">
         <div class="container">
             <div class="festival-info__content">
                 <div class="festival-info__dates">
-                    <time datetime="2025-09-15" class="festival-info__date">15–17 сентября 2025</time>
+                    <time datetime="2026-09-15" class="festival-info__date">15–17 сентября 2026</time>
                 </div>
                 <div class="festival-info__location">
                     <h2 class="festival-info__city">Тирасполь</h2>
@@ -128,124 +156,12 @@
         <div class="container">
             <div class="cta-block__content">
                 <a href="program/program.html" class="btn btn--primary">Посмотреть программу</a>
-                <a href="#schedule" class="btn btn--primary">Составить персональное расписание</a>
+                <a href="#schedule" class="btn btn--primary">Составить план визита</a>
             </div>
         </div>
     </section>
 
-    <!-- Upcoming Events -->
-    <section class="events" id="program" role="region" aria-label="Ближайшие события">
-        <div class="container">
-            <h2 class="section-title">Ближайшие события</h2>
-            <div class="events__grid">
-                <article class="event-card">
-                    <div class="event-card__header">
-                        <span class="event-card__type">Презентация</span>
-                        <time class="event-card__time" datetime="2025-09-15T10:00">15 сентября, 10:00</time>
-                    </div>
-                    <h3 class="event-card__title">Презентация книги «Город и время»</h3>
-                    <p class="event-card__venue">📍 Городской культурный центр, Главный зал</p>
-                </article>
-                <article class="event-card">
-                    <div class="event-card__header">
-                        <span class="event-card__type">Мастер-класс</span>
-                        <time class="event-card__time" datetime="2025-09-15T14:00">15 сентября, 14:00</time>
-                    </div>
-                    <h3 class="event-card__title">Как писать для детей</h3>
-                    <p class="event-card__venue">📍 Центральная библиотека, Зал мастер-классов</p>
-                </article>
-                <article class="event-card">
-                    <div class="event-card__header">
-                        <span class="event-card__type">Дискуссия</span>
-                        <time class="event-card__time" datetime="2025-09-16T16:00">16 сентября, 16:00</time>
-                    </div>
-                    <h3 class="event-card__title">Современная поэзия: традиции и новаторство</h3>
-                    <p class="event-card__venue">📍 Драматический театр, Большая сцена</p>
-                </article>
-                <article class="event-card">
-                    <div class="event-card__header">
-                        <span class="event-card__type">Встреча с автором</span>
-                        <time class="event-card__time" datetime="2025-09-17T12:00">17 сентября, 12:00</time>
-                    </div>
-                    <h3 class="event-card__title">Автограф-сессия с популярными авторами</h3>
-                    <p class="event-card__venue">📍 Парк "Литературный", Книжная ярмарка</p>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- Participants -->
-    <section class="participants" id="participants" role="region" aria-label="Участники фестиваля">
-        <div class="container">
-            <h2 class="section-title">Участники фестиваля</h2>
-            <div class="participants__grid">
-                <article class="participant-card">
-                    <div class="participant-card__image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop" 
-                             alt="Иван Смирнов" 
-                             class="participant-card__image"
-                             loading="lazy">
-                    </div>
-                    <div class="participant-card__content">
-                        <h3 class="participant-card__name">Иван Смирнов</h3>
-                        <p class="participant-card__genre">Историческая проза</p>
-                    </div>
-                </article>
-                <article class="participant-card">
-                    <div class="participant-card__image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop" 
-                             alt="Елена Кузнецова" 
-                             class="participant-card__image"
-                             loading="lazy">
-                    </div>
-                    <div class="participant-card__content">
-                        <h3 class="participant-card__name">Елена Кузнецова</h3>
-                        <p class="participant-card__genre">Детективная литература</p>
-                    </div>
-                </article>
-                <article class="participant-card">
-                    <div class="participant-card__image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop" 
-                             alt="Алексей Морозов" 
-                             class="participant-card__image"
-                             loading="lazy">
-                    </div>
-                    <div class="participant-card__content">
-                        <h3 class="participant-card__name">Алексей Морозов</h3>
-                        <p class="participant-card__genre">Фантастика</p>
-                    </div>
-                </article>
-                <article class="participant-card">
-                    <div class="participant-card__image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop" 
-                             alt="Ольга Новикова" 
-                             class="participant-card__image"
-                             loading="lazy">
-                    </div>
-                    <div class="participant-card__content">
-                        <h3 class="participant-card__name">Ольга Новикова</h3>
-                        <p class="participant-card__genre">Современная проза</p>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- Map Preview -->
-    <section class="map-preview" id="map" role="region" aria-label="Карта площадок">
-        <div class="container">
-            <h2 class="section-title">Карта площадок</h2>
-            <div class="map-preview__content">
-                <div class="map-preview__image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?w=800&h=600&fit=crop" 
-                         alt="Карта площадок фестиваля" 
-                         class="map-preview__image"
-                         loading="lazy">
-                </div>
-                <button class="btn btn--primary btn--map">Открыть карту площадок</button>
-            </div>
-        </div>
-    </section>
+   
 
     <!-- Footer -->
     <footer class="footer" role="contentinfo">
@@ -265,7 +181,7 @@
                     </div>
                 </div>
                 <div class="footer__section">
-                    <p class="footer__copyright">&copy; 2025 ЧитайФест. Все права защищены.</p>
+                    <p class="footer__copyright">&copy; 2026 ЧитайФест. Все права защищены.</p>
                 </div>
             </div>
         </div>

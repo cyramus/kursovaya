@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Планировщик визита на ЧитайФест - составьте персональное расписание мероприятий, рассчитайте время и стоимость участия.">
+    <meta name="keywords" content="планировщик, расписание, мероприятия, калькулятор, фестиваль">
+    <title>Планировщик визита - ЧитайФест</title>
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Lora:ital,wght@0,400;0,600;1,400&family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../main/index.css">
+    <link rel="stylesheet" href="planner.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" role="banner">
+        <div class="container">
+            <div class="header__content">
+                <a href="../index.html" class="logo">
+                    <h1 class="logo__text">ЧитайФест</h1>
+                    <span class="logo__subtitle">Книжный фестиваль</span>
+                </a>
+                <nav class="nav" role="navigation" aria-label="Главное меню">
+                    <button class="nav__toggle" aria-label="Открыть меню" aria-expanded="false">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul class="nav__list">
+                        <li><a href="../index.html" class="nav__link">Главная</a></li>
+                        <li><a href="../program/program.html" class="nav__link">Программа мероприятий</a></li>
+                        <li><a href="../participants/participants.html" class="nav__link">Каталог участников</a></li>
+                        <li><a href="../map/map.html" class="nav__link">Карта</a></li>
+                        <li><a href="planner.html" class="nav__link nav__link--active">Планировщик визита</a></li>
+                        <li><a href="../about/about.html" class="nav__link">О нас</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="planner-page" role="main">
+        <div class="container">
+            <!-- Page Title -->
+            <h1 class="planner-page__title">
+                <span class="planner-page__title-decoration">❦</span>
+                Планировщик визита
+                <span class="planner-page__title-decoration">❦</span>
+            </h1>
+
+            <!-- Add Event CTA -->
+            <section class="planner-cta" role="region" aria-label="Добавление мероприятий">
+                <div class="planner-cta__content">
+                    <p class="planner-cta__text">Добавьте мероприятия в ваше расписание</p>
+                    <a href="../program/program.html" class="btn btn--primary planner-cta__btn">
+                        Перейти к программе
+                    </a>
+                </div>
+            </section>
+
+            <!-- Schedule by Days -->
+            <section class="planner-schedule" id="schedule-section" role="region" aria-label="Расписание мероприятий">
+                <div class="planner-schedule__tabs" role="tablist" aria-label="Дни фестиваля">
+                    <button class="planner-schedule__tab planner-schedule__tab--active" data-day="all" role="tab" aria-selected="true">
+                        Все дни
+                    </button>
+                    <button class="planner-schedule__tab" data-day="1" role="tab" aria-selected="false">
+                        День 1<br><span class="planner-schedule__date">15 сентября</span>
+                    </button>
+                    <button class="planner-schedule__tab" data-day="2" role="tab" aria-selected="false">
+                        День 2<br><span class="planner-schedule__date">16 сентября</span>
+                    </button>
+                    <button class="planner-schedule__tab" data-day="3" role="tab" aria-selected="false">
+                        День 3<br><span class="planner-schedule__date">17 сентября</span>
+                    </button>
+                </div>
+
+                <div class="planner-schedule__content" id="schedule-content">
+                    <!-- Schedule will be inserted here by JavaScript -->
+                </div>
+
+                <div class="planner-schedule__empty" id="empty-schedule" style="display: none;">
+                    <p>Ваше расписание пусто. Добавьте мероприятия из программы фестиваля.</p>
+                </div>
+            </section>
+
+            <!-- Calculators -->
+            <section class="planner-calculators" role="region" aria-label="Калькуляторы">
+                <div class="planner-calculators__grid">
+                    <!-- Time Calculator -->
+                    <div class="planner-calculator">
+                        <h2 class="planner-calculator__title">Калькулятор времени</h2>
+                        <div class="planner-calculator__content">
+                            <div class="planner-calculator__field">
+                                <label for="break-time" class="planner-calculator__label">Время на перерывы между мероприятиями:</label>
+                                <select id="break-time" class="planner-calculator__select">
+                                    <option value="0">0 минут</option>
+                                    <option value="15">15 минут</option>
+                                    <option value="30" selected>30 минут</option>
+                                </select>
+                            </div>
+                            <div class="planner-calculator__result" id="time-result">
+                                <p class="planner-calculator__result-text">Добавьте мероприятия в расписание</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cost Calculator -->
+                    <div class="planner-calculator">
+                        <h2 class="planner-calculator__title">Калькулятор стоимости</h2>
+                        <div class="planner-calculator__content">
+                            <div class="planner-calculator__field">
+                                <label for="visitor-category" class="planner-calculator__label">Категория посетителя:</label>
+                                <select id="visitor-category" class="planner-calculator__select">
+                                    <option value="adult" selected>Взрослый</option>
+                                    <option value="student">Студент</option>
+                                    <option value="discount">Льготный</option>
+                                </select>
+                            </div>
+                            <div class="planner-calculator__field">
+                                <label class="planner-calculator__label">Дополнительные опции:</label>
+                                <div class="planner-calculator__checkboxes">
+                                    <label class="planner-calculator__checkbox-label">
+                                        <input type="checkbox" id="parking" class="planner-calculator__checkbox" value="200">
+                                        <span>Парковка (200₽)</span>
+                                    </label>
+                                    <label class="planner-calculator__checkbox-label">
+                                        <input type="checkbox" id="catalog" class="planner-calculator__checkbox" value="300">
+                                        <span>Каталог фестиваля (300₽)</span>
+                                    </label>
+                                    <label class="planner-calculator__checkbox-label">
+                                        <input type="checkbox" id="souvenirs" class="planner-calculator__checkbox" value="500">
+                                        <span>Сувенирная продукция (500₽)</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="planner-calculator__result" id="cost-result">
+                                <p class="planner-calculator__result-text">Добавьте мероприятия в расписание</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Export Actions -->
+            <section class="planner-export" role="region" aria-label="Экспорт расписания">
+                <div class="planner-export__actions">
+                    <button class="btn btn--secondary planner-export__btn" id="print-btn">
+                        Печать расписания
+                    </button>
+                    <button class="btn btn--secondary planner-export__btn" id="copy-btn">
+                        Скопировать как текст
+                    </button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Modal Window for Participants -->
+    <div class="modal" id="participant-modal" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
+        <div class="modal__overlay" id="modal-overlay"></div>
+        <div class="modal__content modal__content--participant">
+            <button class="modal__close" id="modal-close" aria-label="Закрыть модальное окно">×</button>
+            <div class="modal__body" id="modal-body">
+                <!-- Modal content will be inserted here by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <h3 class="footer__title">Контакты организаторов</h3>
+                    <p class="footer__contact">Email: <a href="mailto:info@chitayfest.ru">info@chitayfest.md</a></p>
+                    <p class="footer__contact">Телефон: <a href="tel:+79991234567">+(373) 777-245-35</a></p>
+                </div>
+                <div class="footer__section">
+                    <h3 class="footer__title">Социальные сети</h3>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-link" aria-label="ВКонтакте">VK</a>
+                        <a href="#" class="footer__social-link" aria-label="Telegram">TG</a>
+                        <a href="#" class="footer__social-link" aria-label="Instagram">IG</a>
+                    </div>
+                </div>
+                <div class="footer__section">
+                    <p class="footer__copyright">&copy; 2026 ЧитайФест. Все права защищены.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../main/script.js"></script>
+    <script src="planner.js"></script>
+</body>
+</html>
+

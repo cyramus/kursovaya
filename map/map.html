@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Карта площадок ЧитайФест - городского книжного фестиваля. Расположение всех площадок, адреса, особенности и расстояния между ними.">
+    <meta name="keywords" content="карта фестиваля, площадки, адреса, расположение, ЧитайФест">
+    <meta property="og:title" content="Карта площадок - ЧитайФест">
+    <meta property="og:description" content="Интерактивная карта всех площадок книжного фестиваля ЧитайФест">
+    <meta property="og:type" content="website">
+    <title>Карта площадок - ЧитайФест</title>
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Lora:ital,wght@0,400;0,600;1,400&family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+          crossorigin=""/>
+          <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../main/index.css">
+    <link rel="stylesheet" href="map.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      "name": "ЧитайФест - Городской книжный фестиваль",
+      "description": "Карта площадок городского книжного фестиваля",
+      "startDate": "2026-09-15",
+      "endDate": "2026-09-17",
+      "location": {
+        "@type": "Place",
+        "name": "Тирасполь",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Тирасполь"
+        }
+      }
+    }
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" role="banner">
+        <div class="container">
+            <div class="header__content">
+                <a href="../index.html" class="logo">
+                    <h1 class="logo__text">ЧитайФест</h1>
+                    <span class="logo__subtitle">Книжный фестиваль</span>
+                </a>
+                <nav class="nav" role="navigation" aria-label="Главное меню">
+                    <button class="nav__toggle" aria-label="Открыть меню" aria-expanded="false">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul class="nav__list">
+                        <li><a href="../index.html" class="nav__link">Главная</a></li>
+                        <li><a href="../program/program.html" class="nav__link">Программа мероприятий</a></li>
+                        <li><a href="../participants/participants.html" class="nav__link">Каталог участников</a></li>
+                        <li><a href="map.html" class="nav__link nav__link--active">Карта</a></li>
+                        <li><a href="../planner/planner.html" class="nav__link">Планировщик визита</a></li>
+                        <li><a href="../about/about.html" class="nav__link">О нас</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="map-page" role="main">
+        <div class="container">
+            <!-- Page Title -->
+            <h1 class="map-page__title">Карта площадок</h1>
+
+            <!-- Map Section -->
+            <section class="map-section" role="region" aria-label="Интерактивная карта площадок">
+                <div class="map-section__header">
+                    <p class="map-section__description">Нажмите на маркер площадки, чтобы узнать подробности. Кликните на карту, чтобы увеличить.</p>
+                </div>
+
+                <!-- Leaflet Map Container -->
+                <div class="map-container" id="map-container" title="Кликните, чтобы увеличить карту"></div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Venue Details Modal -->
+    <div class="modal" id="venue-modal" role="dialog" aria-labelledby="venue-modal-title" aria-hidden="true">
+        <div class="modal__overlay" id="venue-modal-overlay"></div>
+        <div class="modal__content modal__content--venue">
+            <button class="modal__close" id="venue-modal-close" aria-label="Закрыть модальное окно">×</button>
+            <div class="modal__body" id="venue-modal-body">
+                <!-- Content will be filled by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Fullscreen Map Modal -->
+    <div class="modal modal--fullscreen" id="fullscreen-map-modal" role="dialog" aria-label="Увеличенная карта" aria-hidden="true">
+        <div class="modal__overlay" id="fullscreen-map-overlay"></div>
+        <div class="modal__content modal__content--fullscreen">
+            <button class="modal__close" id="fullscreen-map-close" aria-label="Закрыть увеличенную карту">×</button>
+            <div class="modal__body modal__body--fullscreen">
+                <div class="map-container map-container--fullscreen" id="fullscreen-map-container">
+                    <!-- SVG will be cloned here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <h3 class="footer__title">Контакты организаторов</h3>
+                    <p class="footer__contact">Email: <a href="mailto:info@chitayfest.ru">info@chitayfest.md</a></p>
+                    <p class="footer__contact">Телефон: <a href="tel:+79991234567">+(373) 777-245-35</a></p>
+                </div>
+                <div class="footer__section">
+                    <h3 class="footer__title">Социальные сети</h3>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-link" aria-label="ВКонтакте">VK</a>
+                        <a href="#" class="footer__social-link" aria-label="Telegram">TG</a>
+                        <a href="#" class="footer__social-link" aria-label="Instagram">IG</a>
+                    </div>
+                </div>
+                <div class="footer__section">
+                    <p class="footer__copyright">&copy; 2026 ЧитайФест. Все права защищены.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+            crossorigin=""></script>
+    <script src="map.js"></script>
+</body>
+</html>
+

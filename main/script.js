@@ -186,3 +186,49 @@ if (mapButton) {
     });
 }
 
+// Countdown Timer
+class CountdownTimer {
+    constructor() {
+        // Дата начала фестиваля: 15 сентября 2026, 10:00
+        this.festivalDate = new Date('2026-09-15T10:00:00').getTime();
+        this.daysEl = document.getElementById('days');
+        this.hoursEl = document.getElementById('hours');
+        this.minutesEl = document.getElementById('minutes');
+        this.secondsEl = document.getElementById('seconds');
+        
+        if (this.daysEl && this.hoursEl && this.minutesEl && this.secondsEl) {
+            this.updateTimer();
+            setInterval(() => this.updateTimer(), 1000);
+        }
+    }
+    
+    updateTimer() {
+        const now = new Date().getTime();
+        const distance = this.festivalDate - now;
+        
+        if (distance < 0) {
+            // Фестиваль уже начался
+            this.daysEl.textContent = '00';
+            this.hoursEl.textContent = '00';
+            this.minutesEl.textContent = '00';
+            this.secondsEl.textContent = '00';
+            return;
+        }
+        
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+        this.daysEl.textContent = String(days).padStart(2, '0');
+        this.hoursEl.textContent = String(hours).padStart(2, '0');
+        this.minutesEl.textContent = String(minutes).padStart(2, '0');
+        this.secondsEl.textContent = String(seconds).padStart(2, '0');
+    }
+}
+
+// Initialize countdown timer when DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+    new CountdownTimer();
+});
+

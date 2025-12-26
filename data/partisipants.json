@@ -1,0 +1,225 @@
+{
+    "participants": [
+      {
+        "type": "writer",
+        "fullName": "Борис Акунин",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/B._Akunin.jpg/330px-B._Akunin.jpg",
+        "biography": "Борис Акунин — современный российский писатель и переводчик, известный серией исторических детективов о сыщике Эрасте Фандорине. Его произведения сочетают глубокий исторический контекст и детективный сюжет, что делает его одним из самых читаемых авторов России. Акунин также автор большой серии исторических исследований.", 
+        "genres": ["детектив", "исторический роман"],
+        "books": [
+          {"title": "Азазель", "cover": "https://avatars.mds.yandex.net/get-entity_search/399718/294884151/S168x252_2x"},
+          {"title": "Турецкий гамбит", "cover": "https://avatars.mds.yandex.net/get-entity_search/1715309/dUWQFVGYhXIH/S168x252_2x"}
+        ],
+        "awards": ["Премия \"Антибукер\"", "Высокие тиражи и признание читателей"],
+        "officialLink": "https://akunin.ru/",
+        "events": ["Московская книжная ярмарка", "Литературный фестиваль \"Красная площадь\""]
+      },
+      {
+        "type": "writer",
+        "fullName": "Виктор Пелевин",
+        "photo": "https://24smi.org/public/media/celebrity/2022/10/05/1xzsnvvkfkro-viktor-pelevin.jpg",
+        "biography": "Виктор Пелевин — один из самых известных современных российских писателей, представитель постмодернистской литературы. Его произведения сочетают философию, сатиру и элементы фантастики, отражая социальные и культурные процессы современного общества. Пелевин известен закрытым образом жизни и редкими публичными выступлениями.",
+        "genres": ["постмодернизм", "фантастика"],
+        "books": [
+          { "title": "Generation «П»", "cover": "https://content.img-gorod.ru/pim/products/images/85/80/018fa15a-eac4-78f2-9ac3-8551f8158580.jpg" },
+          { "title": "Тайные виды на гору Фудзи", "cover": "https://avatars.mds.yandex.net/get-mpic/5322414/img_id9058417095855533172.jpeg/orig" }
+        ],
+        "awards": ["Литературные премии России"],
+        "officialLink": "https://pelevin.nov.ru/",
+        "events": ["Онлайн-обсуждение книг", "Литературный фестиваль"]
+      },
+      {
+        "type": "writer",
+        "fullName": "Людмила Улицкая",
+        "photo": "https://storage.yandexcloud.net/moskvichmag/uploads/2022/11/ulitskaya1.jpg",
+        "biography": "Людмила Улицкая — российская писательница, сценарист и общественный деятель, одна из наиболее известных фигур современной русской литературы. В своих произведениях она обращается к темам истории XX века, судьбы личности, морального выбора и семейных отношений. Ее проза отличается психологической глубиной, вниманием к деталям и гуманистической направленностью. Книги Улицкой переведены на многие языки и широко издаются за пределами России.",
+        "genres": ["современная проза", "социальная проза"],
+        "books": [
+          { "title": "Даниэль Штайн, переводчик", "cover": "https://avatars.mds.yandex.net/i?id=2b1f2953f9d33e4ec5dce8be7a12efe2124bf7e6-4283547-images-thumbs&n=13" },
+          { "title": "Казус Кукоцкого", "cover": "https://avatars.mds.yandex.net/get-mpic/15429936/2a0000019793ce0055bc76430c8c5107fbb7/orig" }
+        ],
+        "awards": ["Премия «Большая книга»", "Премия «Русский Букер»"],
+        "officialLink": "https://ru.wikipedia.org/wiki/Улицкая,_Людмила_Евгеньевна",
+        "events": ["Литературная дискуссия", "Презентация книги"]
+      },
+      {
+        "type": "writer",
+        "fullName": "Майя Кучерская",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Maya_Kucherskaya_for_Forbes_Woman_Russia_%282023%29.jpg/500px-Maya_Kucherskaya_for_Forbes_Woman_Russia_%282023%29.jpg",
+        "biography": "Майя Кучерская — российская писательница, литературовед и критик. В своих художественных и публицистических произведениях она часто обращается к вопросам веры, культуры, духовных поисков современного человека. Кучерская известна как автор биографических и художественных книг, а также как активный участник литературного процесса и образовательных проектов.",
+        "genres": ["биографическая проза", "современная проза"],
+        "books": [
+          { "title": "Лесков. Прозёванный гений", "cover": "https://content.img-gorod.ru/pim/products/images/8b/c6/018ee4b7-da34-7007-b8b4-2e9aba438bc6.jpg" },
+          { "title": "Бог дождя", "cover": "https://content.img-gorod.ru/pim/products/images/49/30/018fa2d9-dad9-7999-bc60-550a79a54930.jpg" }
+        ],
+        "awards": ["Премия «Большая книга»"],
+        "officialLink": "https://ru.wikipedia.org/wiki/Кучерская,_Майя_Александровна",
+        "events": ["Литературная лекция", "Круглый стол"]
+      },
+      {
+        "type": "writer",
+        "fullName": "Владимир Сорокин",
+        "photo": "https://avatars.mds.yandex.net/i?id=96ef3ab3956be824233585ea6ab11faae31f5595-16406395-images-thumbs&n=13",
+        "biography": "Владимир Сорокин — российский писатель и драматург, один из ключевых представителей литературного постмодернизма. Его творчество характеризуется экспериментами с формой и языком, а также радикальной сатирой на социальные и политические реалии. Произведения Сорокина вызывают активные дискуссии и переведены на многие языки.",
+        "genres": ["постмодернизм", "социальная проза"],
+        "books": [
+          { "title": "Чапаев и Пустота", "cover": "https://avatars.mds.yandex.net/i?id=422979e38372b9aa88e817176e72182e20e3f48e-4120632-images-thumbs&n=13" },
+          { "title": "День опричника", "cover": "https://ir.ozone.ru/s3/multimedia-m/6054778378.jpg" }
+        ],
+        "awards": ["Международные литературные премии"],
+        "officialLink": "https://vladimirsorokin.org/",
+        "events": ["Авторская встреча", "Книжный фестиваль"]
+      },
+      {
+        "type": "writer",
+        "fullName": "Михаил Шишкин",
+        "photo": "https://avatars.mds.yandex.net/i?id=a64bbffefce298c3f21834d71fe88b3a5fc64e2f-8710123-images-thumbs&n=13",
+        "biography": "Михаил Шишкин — российский писатель, номинант и обладатель множества литературных наград, известный своей прозой интеллектуального плана. Его работы уделяют большое внимание языку, истории и человеческим переживаниям.", 
+        "genres": ["интеллектуальная проза"],
+        "books": [
+          {"title": "Венерин волос", "cover": "https://content.img-gorod.ru/pim/products/images/c4/5b/0199ee73-c6a9-7825-85f2-7feecd27c45b.jpg"},
+          {"title": "Письмовник", "cover": "https://content.img-gorod.ru/pim/products/images/12/be/0199e9c5-35a6-7ac4-8cff-afffec4812be.jpg"}
+        ],
+        "awards": ["литературные премии"],
+        "officialLink": "https://en.wikipedia.org/wiki/Mikhail_Shishkin_(writer)",
+        "events": ["Литературный салон в Петербурге", "Московские чтения"]
+      },
+      {
+        "type": "writer",
+        "fullName": "Гузель Яхина",
+        "photo": "https://avatars.mds.yandex.net/i?id=4bf1d66657acb2c732502d7d0d4ca722_sr-5427015-images-thumbs&n=13",
+        "biography": "Гузель Яхина — современная российская писательница, получившая широкую известность благодаря своему дебютному роману об исторических событиях XX века. Ее произведения сочетают историческую достоверность с глубокой психологической прозой, привлекая читателя богатством образов и эмоциональной силой.", 
+        "genres": ["исторический роман"],
+        "books": [
+          {"title": "Зулейха открывает глаза", "cover": "https://avatars.mds.yandex.net/get-mpic/4448948/img_id156104451449894566.jpeg/orig"},
+          {"title": "Дети мои", "cover": "https://static.onlinetrade.ru/img/users_images/215319/b/kniga_deti_moi_yakhina_guzel_1549214195_1.jpg"}
+        ],
+        "awards": ["Литературные премии за вклад в современную прозу"],
+        "officialLink": "https://ru.wikipedia.org/wiki/Яхина,_Гузель_Шамилевна",
+        "events": ["Межрегиональный литературный фестиваль", "Литературный вечер в Казани"]
+      },
+      {
+        "type": "writer",
+        "fullName": "Алексей Иванов",
+        "photo": "https://mnogobukv.hse.ru/data/2018/05/05/1151142008/IMG_6602.jpg",
+        "biography": "Алексей Иванов — современный российский прозаик, известный своими историческими романами и глубоким погружением в культуру регионов России. Его работы часто экранизуются и получают высокие оценки как читателей, так и критиков.", 
+        "genres": ["историческая проза"],
+        "books": [
+          {"title": "Сердце Пармы", "cover": "https://content.img-gorod.ru/pim/products/images/ed/c6/0199ea84-75d2-73c1-a93b-0d7061b9edc6.jpg"},
+          {"title": "Географ глобус пропил", "cover": "https://content.img-gorod.ru/pim/products/images/2d/e5/0199eeef-4fc2-75ca-bd67-1d3677d02de5.jpg"}
+        ],
+        "awards": ["премии за современную прозу"],
+        "officialLink": "https://ivanproduction.ru/",
+        "events": ["Уральский книжный фестиваль", "Международный литературный салон"]
+      },
+      {
+        "type": "writer",
+        "fullName": "Евгений Водолазкин",
+        "photo": "https://avatars.mds.yandex.net/i?id=24abac3c456af8d594fc08194cfdceadbbf835cb-5014298-images-thumbs&n=13",
+        "biography": "Евгений Водолазкин — российский писатель и литературовед, автор произведений, посвященных духовным и философским темам. Его романы получили широкое признание как в России, так и за рубежом, отличаясь глубиной мысли и тонкостью языка.", 
+        "genres": ["философская проза"],
+        "books": [
+          {"title": "Лавр", "cover": "https://content.img-gorod.ru/pim/products/images/9d/9e/018fa155-3d31-7f12-a74d-782e7f169d9e.jpg"},
+          {"title": "Авиатор", "cover": "https://content.img-gorod.ru/pim/products/images/20/1f/018fae09-9ffb-717b-a524-50f3a57b201f.jpg"}
+        ],
+        "awards": ["Национальные литературные премии"],
+        "officialLink": "https://ru.wikipedia.org/wiki/Водолазкин,_Евгений_Германович",
+        "events": ["Литературный фестиваль в Москве", "Чтения современной прозы"]
+      },
+      {
+        "type": "writer",
+        "fullName": "Алексей Сальников",
+        "photo": "https://static.spbdnevnik.ru/uploads/block/image/904922/__medium_001_2021-21-07_Zhurnakov.jpg.jpg",
+        "biography": "Алексей Сальников — молодой российский писатель, отмеченный критиками за оригинальный стиль и нетривиальные сюжеты. Его произведения отражают современные вызовы и психологические портреты героев XXI века.", 
+        "genres": ["современная проза"],
+        "books": [
+          {"title": "Петровы в гриппе и вокруг него", "cover": "https://avatars.mds.yandex.net/get-mpic/12639434/2a000001948e94f403d5131eaa0173e02027/orig"},
+          {"title": "Опосредованно", "cover": "https://avatars.mds.yandex.net/get-mpic/5236885/2a00000191e5ba01afc82193206be46b539c/orig"}
+        ],
+        "awards": ["литературные премии молодых авторов"],
+        "officialLink": "https://salnikov.site/",
+        "events": ["Форум молодых писателей", "Московский литературный салон"]
+      },
+  
+      {
+        "type": "publisher",
+        "name": "Эксмо",
+        "logo": "https://cdn1.ozonusercontent.com/s3/product-service-meta-media/b8f919c4-7a13-4133-aa39-0dc9f4b672d5.jpg",
+        "description": "Одно из крупнейших издательств России, выпускающее художественную, образовательную и популярную литературу. Издательство сотрудничает с ведущими российскими и зарубежными авторами и занимает значительную долю книжного рынка.",
+        "foundedYear": 1991,
+        "authorsRepresented": [
+          "Борис Акунин",
+          "Алексей Иванов"
+        ],
+        "fairStandNumber": "A12",
+        "contact": {
+          "email": "info@eksmo.ru",
+          "phone": "+7 495 123-45-67"
+        }
+      },
+      {
+        "type": "publisher",
+        "name": "АСТ",
+        "logo": "https://cdn1.ozonusercontent.com/s3/product-service-meta-media/0127ecbe-cdf1-4a1f-8d8d-5a919aed65ec.jpg",
+        "description": "Крупное российское издательство с широким ассортиментом литературы — от классики и современной прозы до научно-популярных изданий. Отличается большими тиражами и активной работой с авторами.",
+        "foundedYear": 1990,
+        "authorsRepresented": [
+          "Виктор Пелевин",
+          "Людмила Улицкая"
+        ],
+        "fairStandNumber": "B08",
+        "contact": {
+          "email": "contact@ast.ru",
+          "phone": "+7 495 987-65-43"
+        }
+      },
+      {
+        "type": "publisher",
+        "name": "Азбука-Аттикус",
+        "logo": "https://avatars.mds.yandex.net/get-marketcms/1532570/img-d18db5e4-1d97-47f8-bb3f-05d0a9b249b0.png/optimize",
+        "description": "Престижное российское издательство, выпускающее художественную и переводную литературу с высоким качеством оформления и дизайна.",
+        "foundedYear": 1998,
+        "authorsRepresented": [
+          "Борис Акунин",
+          "Евгений Водолазкин"
+        ],
+        "fairStandNumber": "C15",
+        "contact": {
+          "email": "info@azbooka.ru",
+          "phone": "+7 495 321-7654"
+        }
+      },
+      {
+        "type": "publisher",
+        "name": "Самокат",
+        "logo": "https://rgdb.ru/images/News_main/2020/05/07/01/izdatelstvo-samokat.png",
+        "description": "Московское издательство, специализирующееся на современной детской и подростковой литературе, известное инновационными форматами и ярким дизайном.",
+        "foundedYear": 2007,
+        "authorsRepresented": [
+          "Гузель Яхина",
+          "Майя Кучерская"
+        ],
+        "fairStandNumber": "D22",
+        "contact": {
+          "email": "info@samokatbooks.ru",
+          "phone": "+7 495 234-5678"
+        }
+      },
+      {
+        "type": "publisher",
+        "name": "Белая Ворона",
+        "logo": "https://avatars.mds.yandex.net/i?id=9e5b6f5abec8a34bd33e2a763e51cbc2_l-4841042-images-thumbs&n=13",
+        "description": "Современное российское издательство, ориентированное на новые литературные голоса и авторов, часто публикующее произведения с социальным и культурным акцентом.",
+        "foundedYear": 2010,
+        "authorsRepresented": [
+          "Владимир Сорокин",
+          "Михаил Шишкин"
+        ],
+        "fairStandNumber": "E05",
+        "contact": {
+          "email": "contact@belayavorona.ru",
+          "phone": "+7 495 876-5432"
+        }
+      }
+    ]
+  }
