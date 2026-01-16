@@ -1,0 +1,7 @@
+/* Planner Event Block - Warning Icon Element */
+.planner-event__warning-icon {
+    font-size: 1.25rem;
+    display: inline-block;
+    line-height: 1;
+}
+

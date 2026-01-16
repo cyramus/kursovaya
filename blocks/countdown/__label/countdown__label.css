@@ -1,0 +1,16 @@
+/* Countdown Block - Label Element */
+.countdown__label {
+    font-size: 0.875rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.9;
+}
+
+@media (min-width: 768px) {
+    .countdown__label {
+        font-size: 1rem;
+    }
+}
+
+

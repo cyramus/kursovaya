@@ -1,0 +1,15 @@
+/* Program Filters Block - Label Element */
+.program-filters__label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+    .program-filters__label {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        white-space: normal;
+    }
+}
+

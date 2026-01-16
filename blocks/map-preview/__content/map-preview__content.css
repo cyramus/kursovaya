@@ -1,0 +1,9 @@
+/* Map Preview Block - Content Element */
+.map-preview__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-lg);
+}
+
+

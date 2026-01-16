@@ -1,0 +1,22 @@
+/* Nav Block */
+.nav {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+@media (max-width: 767px) {
+    .nav {
+        width: auto;
+    }
+}
+
+@media (min-width: 768px) {
+    .nav {
+        justify-content: center;
+        width: auto;
+    }
+}
+
+

@@ -1,0 +1,10 @@
+/* Event Card Block - Type Modifier - Author Meeting */
+.event-card_type_author-meeting {
+    border-left-color: #2196F3; /* Blue */
+}
+
+.event-card_type_author-meeting .event-card__type {
+    background-color: #E3F2FD;
+    color: #1976D2;
+}
+

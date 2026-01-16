@@ -1,0 +1,7 @@
+/* Map Preview Block */
+.map-preview {
+    padding: var(--spacing-xxl) 0;
+    background: linear-gradient(135deg, #ffffff 0%, var(--color-background) 100%);
+}
+
+

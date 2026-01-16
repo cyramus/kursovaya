@@ -1,0 +1,9 @@
+/* Modal Block - Authors Title Element */
+.modal__authors-title {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-md);
+}
+

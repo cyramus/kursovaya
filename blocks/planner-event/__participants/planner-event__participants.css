@@ -1,0 +1,7 @@
+/* Planner Event Block - Participants Element */
+.planner-event__participants {
+    margin-top: var(--spacing-sm);
+    padding-top: var(--spacing-sm);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+

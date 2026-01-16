@@ -1,0 +1,10 @@
+/* Hero Block - Dot Element */
+.hero__dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--color-text-light);
+    transition: var(--transition);
+}
+
+

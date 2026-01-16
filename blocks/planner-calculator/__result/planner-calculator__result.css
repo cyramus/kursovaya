@@ -1,0 +1,9 @@
+/* Planner Calculator Block - Result Element */
+.planner-calculator__result {
+    margin-top: var(--spacing-md);
+    padding: var(--spacing-md);
+    background-color: var(--color-background);
+    border-radius: var(--border-radius);
+    min-height: 60px;
+}
+

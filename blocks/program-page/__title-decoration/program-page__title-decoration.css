@@ -1,0 +1,16 @@
+/* Program Page Block - Title Decoration Element */
+.program-page__title-decoration {
+    color: var(--color-accent);
+    font-size: 1.5rem;
+    opacity: 0.7;
+    margin: 0 var(--spacing-sm);
+    font-weight: 400;
+}
+
+@media (min-width: 768px) {
+    .program-page__title-decoration {
+        font-size: 2rem;
+        margin: 0 var(--spacing-md);
+    }
+}
+

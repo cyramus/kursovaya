@@ -1,0 +1,16 @@
+/* Footer Block - Content Element */
+.footer__content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .footer__content {
+        grid-template-columns: repeat(3, 1fr);
+        text-align: left;
+    }
+}
+
+

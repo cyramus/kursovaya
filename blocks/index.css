@@ -1,0 +1,360 @@
+/* BEM Nested CSS Architecture - Main Import File */
+
+/* ============================================
+   1. VENDOR FILES
+   ============================================ */
+/* Add vendor files here (e.g., normalize.css) if needed */
+
+/* ============================================
+   2. VARIABLES & BASE
+   ============================================ */
+@import url('../blocks/variables/variables.css');
+@import url('../blocks/base/base.css');
+
+/* ============================================
+   3. UTILITY BLOCKS
+   ============================================ */
+@import url('./container/container.css');
+
+/* ============================================
+   4. BLOCKS (Base Styles)
+   ============================================ */
+@import url('./header/header.css');
+@import url('./logo/logo.css');
+@import url('./nav/nav.css');
+@import url('./btn/btn.css');
+@import url('./footer/footer.css');
+@import url('./hero/hero.css');
+@import url('./section-title/section-title.css');
+@import url('./events/events.css');
+@import url('./event-card/event-card.css');
+@import url('./participants/participants.css');
+@import url('./participant-card/participant-card.css');
+@import url('./countdown/countdown.css');
+@import url('./cta-block/cta-block.css');
+@import url('./festival-info/festival-info.css');
+@import url('./map-preview/map-preview.css');
+@import url('./accessibility/accessibility.css');
+
+@import url('./modal/modal.css');
+@import url('./gallery-modal/gallery-modal.css');
+
+/* Page-specific blocks - TODO: Refactor */
+@import url('./about-page/about-page.css');
+@import url('./program-page/program-page.css');
+@import url('./program-filters/program-filters.css');
+@import url('./program-days/program-days.css');
+@import url('./program-events/program-events.css');
+@import url('./map-page/map-page.css');
+@import url('./map-section/map-section.css');
+@import url('./map-container/map-container.css');
+@import url('./venue-details/venue-details.css');
+@import url('./map-leaflet/map-leaflet.css');
+@import url('./planner-page/planner-page.css');
+@import url('./planner-cta/planner-cta.css');
+@import url('./planner-schedule/planner-schedule.css');
+@import url('./planner-day/planner-day.css');
+@import url('./planner-event/planner-event.css');
+@import url('./planner-calculators/planner-calculators.css');
+@import url('./planner-calculator/planner-calculator.css');
+@import url('./planner-export/planner-export.css');
+
+
+
+
+/* ============================================
+   5. ELEMENTS (Block Elements)
+   ============================================ */
+
+/* Header Elements */
+@import url('./header/__content/header__content.css');
+
+/* Logo Elements */
+@import url('./logo/__text/logo__text.css');
+@import url('./logo/__subtitle/logo__subtitle.css');
+@import url('./logo/__link/logo__link.css');
+
+/* Nav Elements */
+@import url('./nav/__toggle/nav__toggle.css');
+@import url('./nav/__list/nav__list.css');
+@import url('./nav/__link/nav__link.css');
+
+/* Footer Elements */
+@import url('./footer/__content/footer__content.css');
+@import url('./footer/__section/footer__section.css');
+@import url('./footer/__title/footer__title.css');
+@import url('./footer/__contact/footer__contact.css');
+@import url('./footer/__social/footer__social.css');
+@import url('./footer/__social-link/footer__social-link.css');
+@import url('./footer/__copyright/footer__copyright.css');
+
+/* Hero Elements */
+@import url('./hero/__slider/hero__slider.css');
+@import url('./hero/__slide/hero__slide.css');
+@import url('./hero/__image-wrapper/hero__image-wrapper.css');
+@import url('./hero/__image/hero__image.css');
+@import url('./hero/__content/hero__content.css');
+@import url('./hero/__info/hero__info.css');
+@import url('./hero/__name/hero__name.css');
+@import url('./hero/__role/hero__role.css');
+@import url('./hero/__description/hero__description.css');
+@import url('./hero/__controls/hero__controls.css');
+@import url('./hero/__control/hero__control.css');
+@import url('./hero/__dots/hero__dots.css');
+@import url('./hero/__dot/hero__dot.css');
+
+/* Events Elements */
+@import url('./events/__grid/events__grid.css');
+
+/* Event Card Elements */
+@import url('./event-card/__header/event-card__header.css');
+@import url('./event-card/__type/event-card__type.css');
+@import url('./event-card/__time/event-card__time.css');
+@import url('./event-card/__title/event-card__title.css');
+@import url('./event-card/__venue/event-card__venue.css');
+@import url('./event-card/__popularity/event-card__popularity.css');
+@import url('./event-card/__day/event-card__day.css');
+@import url('./event-card/__age/event-card__age.css');
+@import url('./event-card/__actions/event-card__actions.css');
+@import url('./event-card/__btn/event-card__btn.css');
+
+/* Participants Elements */
+@import url('./participants/__grid/participants__grid.css');
+
+/* Participant Card Elements */
+@import url('./participant-card/__image-wrapper/participant-card__image-wrapper.css');
+@import url('./participant-card/__image/participant-card__image.css');
+@import url('./participant-card/__content/participant-card__content.css');
+@import url('./participant-card/__name/participant-card__name.css');
+@import url('./participant-card/__genre/participant-card__genre.css');
+
+/* Countdown Elements */
+@import url('./countdown/__content/countdown__content.css');
+@import url('./countdown/__title/countdown__title.css');
+@import url('./countdown/__timer/countdown__timer.css');
+@import url('./countdown/__item/countdown__item.css');
+@import url('./countdown/__number/countdown__number.css');
+@import url('./countdown/__label/countdown__label.css');
+
+/* CTA Block Elements */
+@import url('./cta-block/__content/cta-block__content.css');
+
+/* Festival Info Elements */
+@import url('./festival-info/__content/festival-info__content.css');
+@import url('./festival-info/__dates/festival-info__dates.css');
+@import url('./festival-info/__date/festival-info__date.css');
+@import url('./festival-info/__city/festival-info__city.css');
+@import url('./festival-info/__venues/festival-info__venues.css');
+@import url('./festival-info/__description/festival-info__description.css');
+
+/* Map Preview Elements */
+@import url('./map-preview/__content/map-preview__content.css');
+@import url('./map-preview/__image-wrapper/map-preview__image-wrapper.css');
+@import url('./map-preview/__image/map-preview__image.css');
+
+/* Modal Elements */
+@import url('./modal/__overlay/modal__overlay.css');
+@import url('./modal/__content/modal__content.css');
+@import url('./modal/__close/modal__close.css');
+@import url('./modal/__body/modal__body.css');
+@import url('./modal/__title/modal__title.css');
+@import url('./modal/__type/modal__type.css');
+@import url('./modal/__description/modal__description.css');
+@import url('./modal/__info/modal__info.css');
+@import url('./modal/__info-item/modal__info-item.css');
+@import url('./modal/__info-label/modal__info-label.css');
+@import url('./modal/__info-value/modal__info-value.css');
+@import url('./modal/__participants/modal__participants.css');
+@import url('./modal/__participants-title/modal__participants-title.css');
+@import url('./modal/__participant/modal__participant.css');
+@import url('./modal/__participant-name/modal__participant-name.css');
+@import url('./modal/__participant-role/modal__participant-role.css');
+@import url('./modal/__participant-header/modal__participant-header.css');
+@import url('./modal/__participant-photo/modal__participant-photo.css');
+@import url('./modal/__participant-logo/modal__participant-logo.css');
+@import url('./modal/__participant-info/modal__participant-info.css');
+@import url('./modal/__participant-bio/modal__participant-bio.css');
+@import url('./modal/__participant-details/modal__participant-details.css');
+@import url('./modal/__detail-item/modal__detail-item.css');
+@import url('./modal/__detail-label/modal__detail-label.css');
+@import url('./modal/__detail-value/modal__detail-value.css');
+@import url('./modal/__books/modal__books.css');
+@import url('./modal/__books-title/modal__books-title.css');
+@import url('./modal/__books-list/modal__books-list.css');
+@import url('./modal/__book/modal__book.css');
+@import url('./modal/__book-cover/modal__book-cover.css');
+@import url('./modal/__book-title/modal__book-title.css');
+@import url('./modal/__awards/modal__awards.css');
+@import url('./modal/__awards-title/modal__awards-title.css');
+@import url('./modal/__awards-list/modal__awards-list.css');
+@import url('./modal/__award-item/modal__award-item.css');
+@import url('./modal/__links/modal__links.css');
+@import url('./modal/__link/modal__link.css');
+@import url('./modal/__authors/modal__authors.css');
+@import url('./modal/__authors-title/modal__authors-title.css');
+@import url('./modal/__authors-list/modal__authors-list.css');
+@import url('./modal/__author-item/modal__author-item.css');
+@import url('./modal/__contact/modal__contact.css');
+@import url('./modal/__contact-title/modal__contact-title.css');
+@import url('./modal/__contact-item/modal__contact-item.css');
+@import url('./modal/__contact-link/modal__contact-link.css');
+@import url('./modal/__actions/modal__actions.css');
+
+/* Gallery Modal Elements */
+@import url('./gallery-modal/__overlay/gallery-modal__overlay.css');
+@import url('./gallery-modal/__content/gallery-modal__content.css');
+@import url('./gallery-modal/__image/gallery-modal__image.css');
+@import url('./gallery-modal/__close/gallery-modal__close.css');
+
+/* Program Page Elements */
+@import url('./program-page/__title/program-page__title.css');
+@import url('./program-page/__title-decoration/program-page__title-decoration.css');
+
+/* Program Filters Elements */
+@import url('./program-filters/__search/program-filters__search.css');
+@import url('./program-filters/__input/program-filters__input.css');
+@import url('./program-filters/__controls/program-filters__controls.css');
+@import url('./program-filters/__group/program-filters__group.css');
+@import url('./program-filters/__label/program-filters__label.css');
+@import url('./program-filters/__select/program-filters__select.css');
+@import url('./program-filters/__reset/program-filters__reset.css');
+
+/* Program Days Elements */
+@import url('./program-days/__tab/program-days__tab.css');
+@import url('./program-days/__date/program-days__date.css');
+
+/* Program Events Elements */
+@import url('./program-events/__grid/program-events__grid.css');
+@import url('./program-events/__empty/program-events__empty.css');
+
+/* Map Page Elements */
+@import url('./map-page/__title/map-page__title.css');
+
+/* Map Section Elements */
+@import url('./map-section/__header/map-section__header.css');
+@import url('./map-section/__description/map-section__description.css');
+
+/* Venue Details Elements */
+@import url('./venue-details/__title/venue-details__title.css');
+@import url('./venue-details/__info/venue-details__info.css');
+@import url('./venue-details/__item/venue-details__item.css');
+@import url('./venue-details/__label/venue-details__label.css');
+@import url('./venue-details/__value/venue-details__value.css');
+@import url('./venue-details/__features/venue-details__features.css');
+@import url('./venue-details/__features-title/venue-details__features-title.css');
+@import url('./venue-details/__features-list/venue-details__features-list.css');
+@import url('./venue-details/__feature/venue-details__feature.css');
+@import url('./venue-details/__events/venue-details__events.css');
+@import url('./venue-details/__events-title/venue-details__events-title.css');
+@import url('./venue-details/__events-list/venue-details__events-list.css');
+@import url('./venue-details/__event-item/venue-details__event-item.css');
+@import url('./venue-details/__event-name/venue-details__event-name.css');
+@import url('./venue-details/__event-time/venue-details__event-time.css');
+
+/* Planner Page Elements */
+@import url('./planner-page/__title/planner-page__title.css');
+@import url('./planner-page/__title-decoration/planner-page__title-decoration.css');
+
+/* Planner CTA Elements */
+@import url('./planner-cta/__content/planner-cta__content.css');
+@import url('./planner-cta/__text/planner-cta__text.css');
+@import url('./planner-cta/__btn/planner-cta__btn.css');
+
+/* Planner Schedule Elements */
+@import url('./planner-schedule/__tabs/planner-schedule__tabs.css');
+@import url('./planner-schedule/__tab/planner-schedule__tab.css');
+@import url('./planner-schedule/__date/planner-schedule__date.css');
+@import url('./planner-schedule/__content/planner-schedule__content.css');
+@import url('./planner-schedule/__empty/planner-schedule__empty.css');
+
+/* Planner Day Elements */
+@import url('./planner-day/__title/planner-day__title.css');
+@import url('./planner-day/__events/planner-day__events.css');
+
+/* Planner Event Elements */
+@import url('./planner-event/__header/planner-event__header.css');
+@import url('./planner-event/__header-actions/planner-event__header-actions.css');
+@import url('./planner-event/__warning-icon/planner-event__warning-icon.css');
+@import url('./planner-event/__title/planner-event__title.css');
+@import url('./planner-event/__remove/planner-event__remove.css');
+@import url('./planner-event/__info/planner-event__info.css');
+@import url('./planner-event/__info-item/planner-event__info-item.css');
+@import url('./planner-event/__info-label/planner-event__info-label.css');
+@import url('./planner-event/__duration/planner-event__duration.css');
+@import url('./planner-event/__participants/planner-event__participants.css');
+@import url('./planner-event/__participants-label/planner-event__participants-label.css');
+@import url('./planner-event/__participant/planner-event__participant.css');
+@import url('./planner-event/__warning/planner-event__warning.css');
+@import url('./planner-event/__next/planner-event__next.css');
+
+/* Planner Calculators Elements */
+@import url('./planner-calculators/__grid/planner-calculators__grid.css');
+
+/* Planner Calculator Elements */
+@import url('./planner-calculator/__title/planner-calculator__title.css');
+@import url('./planner-calculator/__content/planner-calculator__content.css');
+@import url('./planner-calculator/__field/planner-calculator__field.css');
+@import url('./planner-calculator/__label/planner-calculator__label.css');
+@import url('./planner-calculator/__select/planner-calculator__select.css');
+@import url('./planner-calculator/__checkboxes/planner-calculator__checkboxes.css');
+@import url('./planner-calculator/__checkbox-label/planner-calculator__checkbox-label.css');
+@import url('./planner-calculator/__checkbox/planner-calculator__checkbox.css');
+@import url('./planner-calculator/__result/planner-calculator__result.css');
+@import url('./planner-calculator/__result-text/planner-calculator__result-text.css');
+@import url('./planner-calculator/__result-value/planner-calculator__result-value.css');
+@import url('./planner-calculator/__result-details/planner-calculator__result-details.css');
+@import url('./planner-calculator/__result-warning/planner-calculator__result-warning.css');
+@import url('./planner-calculator/__result-tip/planner-calculator__result-tip.css');
+
+/* Planner Export Elements */
+@import url('./planner-export/__actions/planner-export__actions.css');
+@import url('./planner-export/__btn/planner-export__btn.css');
+
+/* ============================================
+   6. MODIFIERS (Block & Element Modifiers)
+   ============================================ */
+
+/* Button Modifiers */
+@import url('./btn/_primary/btn_primary.css');
+@import url('./btn/_secondary/btn_secondary.css');
+@import url('./btn/_map/btn_map.css');
+
+/* Nav Modifiers */
+@import url('./nav/__list/_open/nav__list_open.css');
+@import url('./nav/__link/_active/nav__link_active.css');
+
+/* Hero Modifiers */
+@import url('./hero/__slide/_active/hero__slide_active.css');
+@import url('./hero/__control/_prev/hero__control_prev.css');
+@import url('./hero/__control/_next/hero__control_next.css');
+@import url('./hero/__dot/_active/hero__dot_active.css');
+
+/* Event Card Modifiers */
+@import url('./event-card/_type/_author-meeting/event-card_type_author-meeting.css');
+@import url('./event-card/_type/_book-presentation/event-card_type_book-presentation.css');
+@import url('./event-card/_type/_workshop/event-card_type_workshop.css');
+@import url('./event-card/_type/_discussion/event-card_type_discussion.css');
+@import url('./event-card/_type/_children/event-card_type_children.css');
+
+/* Program Days Modifiers */
+@import url('./program-days/__tab/_active/program-days__tab_active.css');
+
+/* Planner Schedule Modifiers */
+@import url('./planner-schedule/__tab/_active/planner-schedule__tab_active.css');
+
+/* Planner Event Modifiers */
+@import url('./planner-event/_conflict/planner-event_conflict.css');
+@import url('./planner-event/__next/_warning/planner-event__next_warning.css');
+
+/* Map Container Modifiers */
+@import url('./map-container/_fullscreen/map-container_fullscreen.css');
+
+/* Modal Modifiers */
+@import url('./modal/_fullscreen/modal_fullscreen.css');
+@import url('./modal/__content/_participant/modal__content_participant.css');
+@import url('./modal/__content/_venue/modal__content_venue.css');
+@import url('./modal/__content/_fullscreen/modal__content_fullscreen.css');
+@import url('./modal/__body/_fullscreen/modal__body_fullscreen.css');
+
+
+

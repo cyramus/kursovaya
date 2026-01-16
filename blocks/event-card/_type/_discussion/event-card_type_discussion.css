@@ -1,0 +1,10 @@
+/* Event Card Block - Type Modifier - Discussion */
+.event-card_type_discussion {
+    border-left-color: #9C27B0; /* Purple */
+}
+
+.event-card_type_discussion .event-card__type {
+    background-color: #F3E5F5;
+    color: #7B1FA2;
+}
+

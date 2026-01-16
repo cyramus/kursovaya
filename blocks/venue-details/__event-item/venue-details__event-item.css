@@ -1,0 +1,13 @@
+/* Venue Details Block - Event Item Element */
+.venue-details__event-item {
+    padding: var(--spacing-sm);
+    background-color: var(--color-background);
+    border-radius: var(--border-radius);
+    border-left: 3px solid var(--color-secondary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+}
+

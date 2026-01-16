@@ -1,0 +1,8 @@
+/* Logo Block */
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+

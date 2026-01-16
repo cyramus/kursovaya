@@ -1,0 +1,19 @@
+/* Planner Calculator Block - Select Element */
+.planner-calculator__select {
+    padding: var(--spacing-sm);
+    font-family: var(--font-body);
+    font-size: 0.9375rem;
+    border: 2px solid var(--color-primary);
+    border-radius: var(--border-radius);
+    background-color: var(--color-white);
+    color: var(--color-text);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.planner-calculator__select:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
+}
+

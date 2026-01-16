@@ -1,0 +1,7 @@
+/* Planner Day Block - Events Element */
+.planner-day__events {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+}
+

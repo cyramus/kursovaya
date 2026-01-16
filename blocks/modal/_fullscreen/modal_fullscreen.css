@@ -1,0 +1,11 @@
+/* Modal Block - Fullscreen Modifier */
+.modal_fullscreen {
+    padding: 0;
+}
+
+.modal_fullscreen .modal__close {
+    z-index: 10002;
+    background-color: var(--color-white);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+

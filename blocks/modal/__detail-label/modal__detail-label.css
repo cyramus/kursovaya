@@ -1,0 +1,8 @@
+/* Modal Block - Detail Label Element */
+.modal__detail-label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-text-light);
+    text-transform: uppercase;
+}
+

@@ -1,0 +1,7 @@
+/* Venue Details Block - Value Element */
+.venue-details__value {
+    font-size: 1rem;
+    color: var(--color-text);
+    font-weight: 500;
+}
+

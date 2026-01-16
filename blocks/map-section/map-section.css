@@ -1,0 +1,42 @@
+/* Map Section Block */
+.map-section {
+    background-color: var(--color-white);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-lg);
+    box-shadow: 0 4px 12px rgba(26, 35, 126, 0.1);
+    margin-bottom: var(--spacing-xl);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Book design elements - decorative corners */
+.map-section::before,
+.map-section::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--color-accent);
+    opacity: 0.3;
+}
+
+.map-section::before {
+    top: var(--spacing-sm);
+    left: var(--spacing-sm);
+    border-right: none;
+    border-bottom: none;
+}
+
+.map-section::after {
+    bottom: var(--spacing-sm);
+    right: var(--spacing-sm);
+    border-left: none;
+    border-top: none;
+}
+
+@media (max-width: 767px) {
+    .map-section {
+        padding: var(--spacing-sm);
+    }
+}
+

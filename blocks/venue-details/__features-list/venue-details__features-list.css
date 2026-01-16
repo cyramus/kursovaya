@@ -1,0 +1,10 @@
+/* Venue Details Block - Features List Element */
+.venue-details__features-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+

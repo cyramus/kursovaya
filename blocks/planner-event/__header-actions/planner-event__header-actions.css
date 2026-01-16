@@ -1,0 +1,8 @@
+/* Planner Event Block - Header Actions Element */
+.planner-event__header-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    flex-shrink: 0;
+}
+

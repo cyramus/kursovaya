@@ -1,0 +1,14 @@
+/* Modal Block - Participant Details Element */
+.modal__participant-details {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+@media (min-width: 768px) {
+    .modal__participant-details {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+

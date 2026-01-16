@@ -1,0 +1,8 @@
+/* Participant Card Block - Genre Element */
+.participant-card__genre {
+    color: var(--color-text-light);
+    font-size: 0.9375rem;
+    font-style: italic;
+}
+
+

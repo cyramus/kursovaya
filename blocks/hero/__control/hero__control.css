@@ -1,0 +1,19 @@
+/* Hero Block - Control Element */
+.hero__control {
+    font-size: 2rem;
+    color: var(--color-primary);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: var(--transition);
+}
+
+.hero__control:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+

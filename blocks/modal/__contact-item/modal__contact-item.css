@@ -1,0 +1,10 @@
+/* Modal Block - Contact Item Element */
+.modal__contact-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-sm);
+    font-size: 0.9375rem;
+    color: var(--color-text);
+}
+

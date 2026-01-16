@@ -1,0 +1,10 @@
+/* Hero Block */
+.hero {
+    position: relative;
+    height: 100vh;
+    min-height: 500px;
+    max-height: 800px;
+    overflow: hidden;
+}
+
+

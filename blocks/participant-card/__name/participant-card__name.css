@@ -1,0 +1,10 @@
+/* Participant Card Block - Name Element */
+.participant-card__name {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-xs);
+}
+
+

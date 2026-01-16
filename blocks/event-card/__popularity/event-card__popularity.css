@@ -1,0 +1,12 @@
+/* Event Card Block - Popularity Element */
+.event-card__popularity {
+    position: absolute;
+    top: var(--spacing-sm);
+    right: var(--spacing-sm);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.75rem;
+    color: var(--color-text-light);
+}
+

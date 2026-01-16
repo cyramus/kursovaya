@@ -1,0 +1,7 @@
+/* Planner Event Block - Info Item Element */
+.planner-event__info-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+

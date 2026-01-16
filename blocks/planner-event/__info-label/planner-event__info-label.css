@@ -1,0 +1,6 @@
+/* Planner Event Block - Info Label Element */
+.planner-event__info-label {
+    font-weight: 600;
+    color: var(--color-text-light);
+}
+

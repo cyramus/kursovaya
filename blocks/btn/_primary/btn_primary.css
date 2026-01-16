@@ -1,0 +1,14 @@
+/* Button Block - Primary Modifier */
+.btn_primary {
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+}
+
+.btn_primary:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(26, 35, 126, 0.3);
+}
+
+

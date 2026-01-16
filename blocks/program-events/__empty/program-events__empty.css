@@ -1,0 +1,8 @@
+/* Program Events Block - Empty Element */
+.program-events__empty {
+    text-align: center;
+    padding: var(--spacing-xxl);
+    color: var(--color-text-light);
+    font-size: 1.125rem;
+}
+

@@ -1,0 +1,12 @@
+/* Festival Info Block - Description Element */
+.festival-info__description {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: var(--color-text);
+}
+
+.festival-info__description p {
+    margin-bottom: var(--spacing-md);
+}
+
+

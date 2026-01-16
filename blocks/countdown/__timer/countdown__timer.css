@@ -1,0 +1,9 @@
+/* Countdown Block - Timer Element */
+.countdown__timer {
+    display: flex;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+

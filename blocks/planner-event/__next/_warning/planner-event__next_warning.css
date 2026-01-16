@@ -1,0 +1,7 @@
+/* Planner Event Block - Next Element - Warning Modifier */
+.planner-event__next_warning {
+    background-color: #fff3cd;
+    border-left-color: #ffc107;
+    color: #856404;
+}
+

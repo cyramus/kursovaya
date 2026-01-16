@@ -1,0 +1,21 @@
+/* Modal Block - Body Element */
+.modal__body {
+    padding: var(--spacing-xl);
+    position: relative;
+}
+
+.modal__body > *:first-child {
+    margin-top: 0;
+}
+
+.modal__body > *:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+    .modal__body {
+        padding: var(--spacing-md);
+    }
+}
+
+

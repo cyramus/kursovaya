@@ -1,0 +1,11 @@
+/* Planner Calculator Block - Result Tip Element */
+.planner-calculator__result-tip {
+    margin-top: var(--spacing-sm);
+    padding: var(--spacing-sm);
+    background-color: #d1ecf1;
+    border-left: 3px solid #17a2b8;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    color: #0c5460;
+}
+

@@ -1,0 +1,15 @@
+/* Hero Block - Role Element */
+.hero__role {
+    font-size: 1.25rem;
+    font-style: italic;
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-accent);
+}
+
+@media (min-width: 768px) {
+    .hero__role {
+        font-size: 1.5rem;
+    }
+}
+
+

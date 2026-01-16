@@ -1,0 +1,12 @@
+/* Modal Block - Contact Link Element */
+.modal__contact-link {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.modal__contact-link:hover {
+    color: var(--color-secondary);
+    text-decoration: underline;
+}
+

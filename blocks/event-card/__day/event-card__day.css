@@ -1,0 +1,6 @@
+/* Event Card Block - Day Element */
+.event-card__day {
+    font-weight: 600;
+    color: var(--color-primary);
+}
+

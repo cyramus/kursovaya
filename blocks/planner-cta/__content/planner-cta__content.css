@@ -1,0 +1,8 @@
+/* Planner CTA Block - Content Element */
+.planner-cta__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+

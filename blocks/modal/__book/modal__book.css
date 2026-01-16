@@ -1,0 +1,7 @@
+/* Modal Block - Book Element */
+.modal__book {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+

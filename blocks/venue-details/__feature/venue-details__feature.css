@@ -1,0 +1,10 @@
+/* Venue Details Block - Feature Element */
+.venue-details__feature {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+    border-radius: var(--border-radius);
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+

@@ -1,0 +1,11 @@
+/* Event Card Block - Time Element */
+.event-card__time {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-text-light);
+    font-size: 0.9375rem;
+}
+
+

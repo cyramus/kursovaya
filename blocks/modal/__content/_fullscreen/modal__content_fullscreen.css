@@ -1,0 +1,20 @@
+/* Modal Block - Content Element - Fullscreen Modifier */
+.modal__content_fullscreen {
+    max-width: 95vw;
+    max-height: 95vh;
+    width: 95vw;
+    height: 95vh;
+    border-radius: var(--border-radius);
+    position: relative;
+    overflow: visible;
+}
+
+.modal__content_fullscreen .modal__close {
+    position: fixed;
+    top: calc(var(--spacing-sm) + 2.5vh);
+    right: calc(var(--spacing-sm) + 2.5vw);
+    z-index: 10002;
+    background-color: var(--color-white);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+

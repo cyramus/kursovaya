@@ -1,0 +1,10 @@
+/* Event Card Block - Type Modifier - Children */
+.event-card_type_children {
+    border-left-color: #FF9800; /* Orange */
+}
+
+.event-card_type_children .event-card__type {
+    background-color: #FFE0B2;
+    color: #E65100;
+}
+

@@ -1,0 +1,27 @@
+/* Nav Block - Link Element */
+.nav__link {
+    color: var(--color-text);
+    font-weight: 500;
+    padding: var(--spacing-xs) 0;
+    position: relative;
+    display: block;
+    text-align: center;
+}
+
+.nav__link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-accent);
+    transition: var(--transition);
+}
+
+.nav__link:hover::after,
+.nav__link_active::after {
+    width: 100%;
+}
+
+

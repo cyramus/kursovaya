@@ -1,0 +1,14 @@
+/* Program Filters Block - Reset Element */
+.program-filters__reset {
+    margin-top: var(--spacing-lg);
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .program-filters__reset {
+        width: auto;
+        margin-top: var(--spacing-lg);
+        margin-left: auto;
+    }
+}
+

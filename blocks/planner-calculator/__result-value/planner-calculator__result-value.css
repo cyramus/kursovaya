@@ -1,0 +1,8 @@
+/* Planner Calculator Block - Result Value Element */
+.planner-calculator__result-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin: var(--spacing-sm) 0;
+}
+

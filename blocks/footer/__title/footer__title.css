@@ -1,0 +1,10 @@
+/* Footer Block - Title Element */
+.footer__title {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-accent);
+}
+
+

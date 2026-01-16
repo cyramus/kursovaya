@@ -1,0 +1,6 @@
+/* Planner Event Block - Conflict Modifier */
+.planner-event_conflict {
+    border-left-color: #dc3545;
+    background-color: #fff5f5;
+}
+

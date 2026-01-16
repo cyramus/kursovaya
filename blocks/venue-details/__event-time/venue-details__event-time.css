@@ -1,0 +1,7 @@
+/* Venue Details Block - Event Time Element */
+.venue-details__event-time {
+    font-size: 0.875rem;
+    color: var(--color-text-light);
+    font-style: italic;
+}
+

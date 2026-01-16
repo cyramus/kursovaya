@@ -1,0 +1,5 @@
+/* Venue Details Block - Features Element */
+.venue-details__features {
+    margin-top: var(--spacing-md);
+}
+

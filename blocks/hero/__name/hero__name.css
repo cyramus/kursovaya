@@ -1,0 +1,16 @@
+/* Hero Block - Name Element */
+.hero__name {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: var(--spacing-sm);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: 768px) {
+    .hero__name {
+        font-size: 3.5rem;
+    }
+}
+
+

@@ -1,0 +1,20 @@
+/* Events Block - Grid Element */
+.events__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+}
+
+@media (min-width: 768px) {
+    .events__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .events__grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+

@@ -1,0 +1,16 @@
+/* Planner Event Block - Info Element */
+.planner-event__info {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xs);
+    margin-bottom: var(--spacing-sm);
+    font-size: 0.9375rem;
+    color: var(--color-text);
+}
+
+@media (min-width: 768px) {
+    .planner-event__info {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+

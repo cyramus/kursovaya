@@ -1,0 +1,9 @@
+/* Planner Event Block - Header Element */
+.planner-event__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+}
+

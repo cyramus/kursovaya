@@ -1,0 +1,8 @@
+/* Modal Block - Info Item Element */
+.modal__info-item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+
+

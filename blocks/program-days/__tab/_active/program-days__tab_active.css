@@ -1,0 +1,7 @@
+/* Program Days Block - Tab Element - Active Modifier */
+.program-days__tab_active {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border-color: var(--color-primary);
+}
+

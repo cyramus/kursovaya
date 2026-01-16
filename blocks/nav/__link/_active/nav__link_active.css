@@ -1,0 +1,10 @@
+/* Nav Block - Link Element - Active Modifier */
+.nav__link_active {
+    color: var(--color-primary);
+}
+
+.nav__link_active::after {
+    width: 100%;
+}
+
+

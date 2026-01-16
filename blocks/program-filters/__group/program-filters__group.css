@@ -1,0 +1,15 @@
+/* Program Filters Block - Group Element */
+.program-filters__group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+    min-width: 0;
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+    .program-filters__group {
+        min-width: 0;
+        overflow: hidden;
+    }
+}
+

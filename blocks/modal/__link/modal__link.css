@@ -1,0 +1,18 @@
+/* Modal Block - Link Element */
+.modal__link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    font-size: 0.9375rem;
+    transition: var(--transition);
+}
+
+.modal__link:hover {
+    background-color: var(--color-secondary);
+}
+

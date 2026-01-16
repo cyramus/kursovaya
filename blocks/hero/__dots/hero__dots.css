@@ -1,0 +1,7 @@
+/* Hero Block - Dots Element */
+.hero__dots {
+    display: flex;
+    gap: var(--spacing-xs);
+}
+
+

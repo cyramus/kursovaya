@@ -1,0 +1,8 @@
+/* Planner Calculator Block */
+.planner-calculator {
+    background-color: var(--color-white);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-lg);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+

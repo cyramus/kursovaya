@@ -1,0 +1,10 @@
+/* Planner Event Block - Title Element */
+.planner-event__title {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin: 0;
+    flex: 1;
+}
+

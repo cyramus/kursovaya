@@ -1,0 +1,7 @@
+/* Planner CTA Block - Text Element */
+.planner-cta__text {
+    font-size: 1.25rem;
+    color: var(--color-white);
+    margin: 0;
+}
+

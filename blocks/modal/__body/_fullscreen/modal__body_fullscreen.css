@@ -1,0 +1,13 @@
+/* Modal Block - Body Element - Fullscreen Modifier */
+.modal__body_fullscreen {
+    padding: var(--spacing-lg);
+    height: 100%;
+    overflow: auto;
+}
+
+@media (max-width: 767px) {
+    .modal__body_fullscreen {
+        padding: var(--spacing-md);
+    }
+}
+

@@ -1,0 +1,16 @@
+/* Countdown Block - Title Element */
+.countdown__title {
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: 768px) {
+    .countdown__title {
+        font-size: 2.5rem;
+    }
+}
+
+

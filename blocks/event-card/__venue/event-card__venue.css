@@ -1,0 +1,11 @@
+/* Event Card Block - Venue Element */
+.event-card__venue {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-xs);
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-text-light);
+    font-size: 0.9375rem;
+}
+
+

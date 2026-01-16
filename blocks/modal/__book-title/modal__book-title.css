@@ -1,0 +1,8 @@
+/* Modal Block - Book Title Element */
+.modal__book-title {
+    font-size: 0.875rem;
+    color: var(--color-text);
+    text-align: center;
+    line-height: 1.3;
+}
+

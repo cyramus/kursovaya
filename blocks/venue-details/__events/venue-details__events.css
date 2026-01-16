@@ -1,0 +1,5 @@
+/* Venue Details Block - Events Element */
+.venue-details__events {
+    margin-top: var(--spacing-lg);
+}
+

@@ -1,0 +1,8 @@
+/* Planner Event Block - Participants Label Element */
+.planner-event__participants-label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-text-light);
+    margin-bottom: var(--spacing-xs);
+}
+

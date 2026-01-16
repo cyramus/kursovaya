@@ -1,0 +1,7 @@
+/* Hero Block - Slide Element - Active Modifier */
+.hero__slide_active {
+    opacity: 1;
+    z-index: 1;
+}
+
+

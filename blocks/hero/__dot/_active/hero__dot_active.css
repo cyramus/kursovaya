@@ -1,0 +1,8 @@
+/* Hero Block - Dot Element - Active Modifier */
+.hero__dot_active {
+    background-color: var(--color-primary);
+    width: 24px;
+    border-radius: 6px;
+}
+
+

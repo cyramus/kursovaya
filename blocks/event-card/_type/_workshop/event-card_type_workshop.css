@@ -1,0 +1,10 @@
+/* Event Card Block - Type Modifier - Workshop */
+.event-card_type_workshop {
+    border-left-color: #FFC107; /* Yellow */
+}
+
+.event-card_type_workshop .event-card__type {
+    background-color: #FFF9C4;
+    color: #F57C00;
+}
+

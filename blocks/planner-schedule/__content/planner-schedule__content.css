@@ -1,0 +1,7 @@
+/* Planner Schedule Block - Content Element */
+.planner-schedule__content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+}
+

@@ -1,0 +1,7 @@
+/* Modal Block - Info Value Element */
+.modal__info-value {
+    font-size: 1rem;
+    color: var(--color-text);
+}
+
+

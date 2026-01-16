@@ -1,0 +1,14 @@
+/* Venue Details Block - Info Element */
+.venue-details__info {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+@media (min-width: 768px) {
+    .venue-details__info {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+

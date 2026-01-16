@@ -1,0 +1,8 @@
+/* Event Card Block - Actions Element */
+.event-card__actions {
+    display: flex;
+    gap: var(--spacing-sm);
+    margin-top: auto;
+    flex-wrap: wrap;
+}
+

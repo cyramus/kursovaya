@@ -1,0 +1,11 @@
+/* Countdown Block */
+.countdown {
+    background: linear-gradient(135deg, #1A237E 0%, #6A1B4D 100%);
+    padding: var(--spacing-xl) 0;
+    color: var(--color-white);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+

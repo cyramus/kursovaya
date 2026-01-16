@@ -1,0 +1,12 @@
+/* Event Card Block - Age Element */
+.event-card__age {
+    display: inline-block;
+    padding: 2px var(--spacing-xs);
+    background-color: var(--color-background);
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: var(--spacing-md);
+}
+

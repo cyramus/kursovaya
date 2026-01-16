@@ -1,0 +1,9 @@
+/* Festival Info Block - Venues Element */
+.festival-info__venues {
+    font-size: 1.125rem;
+    color: var(--color-text-light);
+    margin-bottom: var(--spacing-lg);
+    font-style: italic;
+}
+
+

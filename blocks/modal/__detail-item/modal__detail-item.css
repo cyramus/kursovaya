@@ -1,0 +1,7 @@
+/* Modal Block - Detail Item Element */
+.modal__detail-item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+

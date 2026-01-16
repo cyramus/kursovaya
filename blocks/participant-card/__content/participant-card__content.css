@@ -1,0 +1,6 @@
+/* Participant Card Block - Content Element */
+.participant-card__content {
+    padding: var(--spacing-md);
+}
+
+

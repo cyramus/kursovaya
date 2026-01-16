@@ -1,0 +1,12 @@
+/* Modal Block - Actions Element */
+.modal__actions {
+    display: flex;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+}
+
+.modal__actions .btn {
+    flex: 1;
+    min-width: 150px;
+}
+

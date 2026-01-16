@@ -1,0 +1,10 @@
+/* Event Card Block - Type Modifier - Book Presentation */
+.event-card_type_book-presentation {
+    border-left-color: #4CAF50; /* Green */
+}
+
+.event-card_type_book-presentation .event-card__type {
+    background-color: #E8F5E9;
+    color: #388E3C;
+}
+

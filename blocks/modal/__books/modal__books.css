@@ -1,0 +1,5 @@
+/* Modal Block - Books Element */
+.modal__books {
+    margin-bottom: var(--spacing-lg);
+}
+

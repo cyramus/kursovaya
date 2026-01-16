@@ -1,0 +1,7 @@
+/* Button Block - Map Modifier */
+.btn_map {
+    font-size: 1.125rem;
+    padding: var(--spacing-md) var(--spacing-xl);
+}
+
+

@@ -1,0 +1,7 @@
+/* Planner Schedule Block - Tab Element - Active Modifier */
+.planner-schedule__tab_active {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border-color: var(--color-primary);
+}
+

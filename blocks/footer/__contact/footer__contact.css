@@ -1,0 +1,16 @@
+/* Footer Block - Contact Element */
+.footer__contact {
+    margin-bottom: var(--spacing-xs);
+    font-size: 0.9375rem;
+}
+
+.footer__contact a {
+    color: var(--color-accent);
+    text-decoration: underline;
+}
+
+.footer__contact a:hover {
+    color: var(--color-white);
+}
+
+

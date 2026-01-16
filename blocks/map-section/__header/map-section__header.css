@@ -1,0 +1,17 @@
+/* Map Section Block - Header Element */
+.map-section__header {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .map-section__header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+

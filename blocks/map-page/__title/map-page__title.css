@@ -1,0 +1,33 @@
+/* Map Page Block - Title Element */
+.map-page__title {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+    position: relative;
+}
+
+.map-page__title::before,
+.map-page__title::after {
+    content: '❦';
+    color: var(--color-accent);
+    margin: 0 var(--spacing-md);
+    opacity: 0.6;
+}
+
+@media (max-width: 767px) {
+    .map-page__title {
+        font-size: 1.5rem;
+        text-align: center;
+        margin-bottom: var(--spacing-lg);
+    }
+}
+
+@media (min-width: 768px) {
+    .map-page__title {
+        font-size: 3rem;
+    }
+}
+

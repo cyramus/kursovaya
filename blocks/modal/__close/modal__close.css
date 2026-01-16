@@ -1,0 +1,30 @@
+/* Modal Block - Close Element */
+.modal__close {
+    position: absolute;
+    top: var(--spacing-sm);
+    right: var(--spacing-sm);
+    width: 40px;
+    height: 40px;
+    font-size: 2rem;
+    line-height: 1;
+    color: var(--color-text);
+    background-color: var(--color-background);
+    border: 2px solid var(--color-primary);
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10001;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.modal__close:hover,
+.modal__close:focus {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border-color: var(--color-accent);
+    transform: rotate(90deg);
+}
+
+

@@ -1,0 +1,11 @@
+/* Venue Details Block - Item Element */
+.venue-details__item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-sm);
+    background-color: var(--color-background);
+    border-radius: var(--border-radius);
+    border-left: 4px solid var(--color-accent);
+}
+

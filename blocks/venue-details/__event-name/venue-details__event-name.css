@@ -1,0 +1,8 @@
+/* Venue Details Block - Event Name Element */
+.venue-details__event-name {
+    font-weight: 600;
+    color: var(--color-text);
+    flex: 1;
+    min-width: 200px;
+}
+

@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Lora:ital,wght@0,400;0,600;1,400&family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="main/index.css">
+    <link rel="stylesheet" href="blocks/index.css">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
 </head>
 <body>
@@ -28,12 +28,12 @@
                         <span></span>
                     </button>
                     <ul class="nav__list">
-                        <li><a href="#home" class="nav__link nav__link--active">Главная</a></li>
-                        <li><a href="program/program.html" class="nav__link">Программа мероприятий</a></li>
-                        <li><a href="participants/participants.html" class="nav__link">Каталог участников</a></li>
-                        <li><a href="map/map.html" class="nav__link">Карта</a></li>
-                        <li><a href="planner/planner.html" class="nav__link">Планировщик визита</a></li>
-                        <li><a href="about/about.html" class="nav__link">О нас</a></li>
+                        <li><a href="#home" class="nav__link nav__link_active">Главная</a></li>
+                        <li><a href="pages/program.html" class="nav__link">Программа мероприятий</a></li>
+                        <li><a href="pages/participants.html" class="nav__link">Каталог участников</a></li>
+                        <li><a href="pages/map.html" class="nav__link">Карта</a></li>
+                        <li><a href="pages/planner.html" class="nav__link">Планировщик визита</a></li>
+                        <li><a href="pages/about.html" class="nav__link">О нас</a></li>
                     </ul>
                 </nav>
             </div>
@@ -43,7 +43,7 @@
     <!-- Hero Section -->
     <section class="hero" id="home" role="region" aria-label="Главный экран">
         <div class="hero__slider">
-            <div class="hero__slide hero__slide--active" data-slide="0">
+            <div class="hero__slide hero__slide_active" data-slide="0">
                 <div class="hero__image-wrapper">
                     <img src="https://storage.yandexcloud.net/moskvichmag/uploads/2022/11/ulitskaya1.jpg" 
                          alt="Хедлайнер фестиваля" 
@@ -96,13 +96,13 @@
             </div>
         </div>
         <div class="hero__controls">
-            <button class="hero__control hero__control--prev" aria-label="Предыдущий слайд">‹</button>
+            <button class="hero__control hero__control_prev" aria-label="Предыдущий слайд">‹</button>
             <div class="hero__dots">
-                <button class="hero__dot hero__dot--active" aria-label="Слайд 1" data-slide="0"></button>
+                <button class="hero__dot hero__dot_active" aria-label="Слайд 1" data-slide="0"></button>
                 <button class="hero__dot" aria-label="Слайд 2" data-slide="1"></button>
                 <button class="hero__dot" aria-label="Слайд 3" data-slide="2"></button>
             </div>
-            <button class="hero__control hero__control--next" aria-label="Следующий слайд">›</button>
+            <button class="hero__control hero__control_next" aria-label="Следующий слайд">›</button>
         </div>
     </section>
 
@@ -155,8 +155,8 @@
     <section class="cta-block" role="region" aria-label="Призыв к действию">
         <div class="container">
             <div class="cta-block__content">
-                <a href="program/program.html" class="btn btn--primary">Посмотреть программу</a>
-                <a href="planner/planner.html" class="btn btn--primary">Составить план визита</a>
+                <a href="pages/program.html" class="btn btn_primary">Посмотреть программу</a>
+                <a href="pages/planner.html" class="btn btn_primary">Составить план визита</a>
             </div>
         </div>
     </section>
@@ -187,6 +187,6 @@
         </div>
     </footer>
 
-    <script src="main/script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

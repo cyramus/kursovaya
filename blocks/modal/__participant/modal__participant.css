@@ -1,0 +1,8 @@
+/* Modal Block - Participant Element */
+.modal__participant {
+    padding: var(--spacing-sm);
+    background-color: var(--color-background);
+    border-radius: var(--border-radius);
+    margin-bottom: var(--spacing-sm);
+}
+

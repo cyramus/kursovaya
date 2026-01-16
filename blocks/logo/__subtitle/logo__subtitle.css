@@ -1,0 +1,9 @@
+/* Logo Block - Subtitle Element */
+.logo__subtitle {
+    font-size: 0.75rem;
+    color: var(--color-text-light);
+    font-style: italic;
+    margin-top: -4px;
+}
+
+

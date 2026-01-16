@@ -1,0 +1,7 @@
+/* Planner Calculator Block - Content Element */
+.planner-calculator__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+

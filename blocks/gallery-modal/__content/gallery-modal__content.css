@@ -1,0 +1,16 @@
+/* Gallery Modal Block - Content Element */
+.gallery-modal__content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    z-index: 1;
+}
+
+@media (max-width: 767px) {
+    .gallery-modal__content {
+        max-width: 95%;
+        max-height: 95%;
+    }
+}
+
+

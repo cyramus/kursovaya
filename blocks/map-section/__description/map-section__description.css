@@ -1,0 +1,9 @@
+/* Map Section Block - Description Element */
+.map-section__description {
+    font-size: 0.9375rem;
+    color: var(--color-text-light);
+    font-style: italic;
+    margin: 0;
+    text-align: center;
+}
+
