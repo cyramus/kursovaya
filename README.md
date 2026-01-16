@@ -38,14 +38,14 @@ project/
 ├── README.md                  # Документация проекта
 ├── .nojekyll
 ├── favicon.ico
-├── pages/                     # Раздел "О нас"
+├── pages/                     # Остальные страницы
 │   ├── about.html
 │   ├── planner.html
 │   ├── map.html
 │   ├── participants.html
 │   ├── program.html
-│   └── blocks/
-├── js/                     # Раздел "О нас"
+├── blocks/                    # Все стили
+├── js/                     # JS-файлы страниц
 │   ├── about.js
 │   ├── planner.js
 │   ├── map.js
