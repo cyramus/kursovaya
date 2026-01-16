@@ -793,7 +793,277 @@ class PlannerPage {
     }
 
     printSchedule() {
-        window.print();
+        if (this.schedule.length === 0) {
+            alert('Расписание пусто. Добавьте мероприятия перед печатью.');
+            return;
+        }
+
+        // Create print window
+        const printWindow = window.open('', '', 'height=700,width=900');
+        
+        const dayLabels = {
+            1: 'День 1 (15 сентября)',
+            2: 'День 2 (16 сентября)',
+            3: 'День 3 (17 сентября)'
+        };
+
+        const scheduleByDay = {};
+        this.schedule.forEach(event => {
+            if (!scheduleByDay[event.day]) {
+                scheduleByDay[event.day] = [];
+            }
+            scheduleByDay[event.day].push(event);
+        });
+
+        let html = `
+            <!DOCTYPE html>
+            <html lang="ru">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Мое расписание - ЧитайФест 2026</title>
+                <style>
+                    * {
+                        margin: 0;
+                        padding: 0;
+                        box-sizing: border-box;
+                    }
+                    body {
+                        font-family: 'PT Serif', serif;
+                        font-size: 14px;
+                        line-height: 1.6;
+                        color: #333;
+                        padding: 20px;
+                        background: white;
+                    }
+                    .print-header {
+                        text-align: center;
+                        margin-bottom: 30px;
+                        border-bottom: 2px solid #1a237e;
+                        padding-bottom: 15px;
+                    }
+                    .print-title {
+                        font-size: 28px;
+                        font-weight: 700;
+                        color: #1a237e;
+                        margin-bottom: 5px;
+                    }
+                    .print-subtitle {
+                        font-size: 16px;
+                        color: #666;
+                    }
+                    .day-section {
+                        margin-bottom: 30px;
+                        page-break-inside: avoid;
+                    }
+                    .day-title {
+                        font-size: 18px;
+                        font-weight: 700;
+                        color: #1a237e;
+                        margin-bottom: 15px;
+                        padding-bottom: 10px;
+                        border-bottom: 1px solid #ddd;
+                    }
+                    .event {
+                        margin-bottom: 20px;
+                        padding: 15px;
+                        border-left: 4px solid #ff6b6b;
+                        background: #f9f9f9;
+                        page-break-inside: avoid;
+                    }
+                    .event-time {
+                        font-weight: 700;
+                        color: #1a237e;
+                        font-size: 15px;
+                        margin-bottom: 5px;
+                    }
+                    .event-title {
+                        font-size: 16px;
+                        font-weight: 600;
+                        color: #1a237e;
+                        margin-bottom: 8px;
+                    }
+                    .event-venue {
+                        color: #666;
+                        font-size: 13px;
+                        margin-bottom: 5px;
+                    }
+                    .event-participants {
+                        color: #666;
+                        font-size: 13px;
+                        margin-top: 8px;
+                        font-style: italic;
+                    }
+                    .summary {
+                        margin-top: 40px;
+                        padding: 20px;
+                        border: 2px solid #1a237e;
+                        border-radius: 4px;
+                        background: #f0f0f5;
+                    }
+                    .summary-title {
+                        font-size: 16px;
+                        font-weight: 700;
+                        color: #1a237e;
+                        margin-bottom: 10px;
+                    }
+                    .summary-item {
+                        margin-bottom: 8px;
+                        color: #333;
+                    }
+                    @media print {
+                        body {
+                            padding: 0;
+                        }
+                        .event {
+                            page-break-inside: avoid;
+                        }
+                        .day-section {
+                            page-break-inside: avoid;
+                        }
+                    }
+                </style>
+            </head>
+            <body>
+                <div class="print-header">
+                    <div class="print-title">ЧитайФест 2026</div>
+                    <div class="print-subtitle">Мое персональное расписание</div>
+                </div>
+        `;
+
+        // Add schedule by days
+        Object.keys(scheduleByDay)
+            .sort()
+            .forEach(day => {
+                html += `<div class="day-section">`;
+                html += `<h2 class="day-title">${dayLabels[day]}</h2>`;
+                
+                scheduleByDay[day]
+                    .sort((a, b) => a.startTime.localeCompare(b.startTime))
+                    .forEach(event => {
+                        const venueName = event.venue.split(',')[0];
+                        html += `
+                            <div class="event">
+                                <div class="event-time">${event.startTime} – ${event.endTime}</div>
+                                <div class="event-title">${event.title}</div>
+                                <div class="event-venue">📍 ${venueName}</div>
+                        `;
+                        
+                        if (event.participants && event.participants.length > 0) {
+                            html += `<div class="event-participants">👥 ${event.participants.map(p => p.name).join(', ')}</div>`;
+                        }
+                        
+                        html += `</div>`;
+                    });
+                
+                html += `</div>`;
+            });
+
+        // Add summary
+        const breakTime = parseInt(document.getElementById('break-time').value);
+        let totalMinutes = 0;
+        const sortedSchedule = [...this.schedule].sort((a, b) => {
+            if (a.day !== b.day) return a.day - b.day;
+            return a.startTime.localeCompare(b.startTime);
+        });
+
+        sortedSchedule.forEach((event, index) => {
+            const duration = this.calculateDuration(event.startTime, event.endTime);
+            totalMinutes += duration;
+            if (index < sortedSchedule.length - 1) {
+                const nextEvent = sortedSchedule[index + 1];
+                if (nextEvent.day === event.day) {
+                    totalMinutes += breakTime;
+                }
+            }
+        });
+
+        const hours = Math.floor(totalMinutes / 60);
+        const minutes = totalMinutes % 60;
+
+        // Calculate cost
+        const category = document.getElementById('visitor-category').value;
+        const categoryCoefficients = {
+            adult: 1.0,
+            student: 0.7,
+            discount: 0.5
+        };
+        const coefficient = categoryCoefficients[category];
+        const categoryNames = {
+            adult: 'Взрослый',
+            student: 'Студент',
+            discount: 'Льготный'
+        };
+
+        let baseCostBeforeCoefficient = 0;
+        const paidEvents = this.schedule.filter(e => {
+            const price = e.price;
+            return price && price !== 'Бесплатно' && !price.includes('Бесплатно');
+        });
+
+        paidEvents.forEach(event => {
+            const priceMatch = event.price.match(/(\d+)/);
+            if (priceMatch) {
+                baseCostBeforeCoefficient += parseInt(priceMatch[1]);
+            }
+        });
+
+        let baseCost = baseCostBeforeCoefficient * coefficient;
+        let discount = 0;
+        let discountPercent = 0;
+        
+        if (paidEvents.length >= 5) {
+            discountPercent = 0.2;
+            discount = baseCost * discountPercent;
+        } else if (paidEvents.length >= 3) {
+            discountPercent = 0.1;
+            discount = baseCost * discountPercent;
+        }
+
+        const costAfterDiscount = baseCost - discount;
+
+        let additionalCost = 0;
+        const parking = document.getElementById('parking');
+        const catalog = document.getElementById('catalog');
+        const souvenirs = document.getElementById('souvenirs');
+
+        if (parking && parking.checked) additionalCost += 200;
+        if (catalog && catalog.checked) additionalCost += 300;
+        if (souvenirs && souvenirs.checked) additionalCost += 500;
+
+        const totalCost = costAfterDiscount + additionalCost;
+
+        html += `
+            <div class="summary">
+                <div class="summary-title">Сводка</div>
+                <div class="summary-item">Мероприятий в расписании: <strong>${this.schedule.length}</strong></div>
+                <div class="summary-item">Платных мероприятий: <strong>${paidEvents.length}</strong></div>
+                <div class="summary-item">Дней: <strong>${Object.keys(scheduleByDay).length}</strong></div>
+                <div class="summary-item">Общее время: <strong>${hours} ч ${minutes} мин</strong></div>
+                <div style="margin-top: 15px; border-top: 1px solid #ccc; padding-top: 15px;">
+                    <div class="summary-item">Категория посетителя: <strong>${categoryNames[category]}</strong></div>
+                    <div class="summary-item">Базовая стоимость: <strong>${Math.round(baseCost)}₽</strong></div>
+                    ${discountPercent > 0 ? `<div class="summary-item">Скидка (${Math.round(discountPercent * 100)}%): <strong>-${Math.round(discount)}₽</strong></div>` : ''}
+                    ${discountPercent > 0 ? `<div class="summary-item">Стоимость со скидкой: <strong>${Math.round(costAfterDiscount)}₽</strong></div>` : ''}
+                    ${additionalCost > 0 ? `<div class="summary-item">Дополнительные опции: <strong>${additionalCost}₽</strong></div>` : ''}
+                    <div class="summary-item" style="font-size: 16px; margin-top: 10px;">Итого: <strong style="color: #ff6b6b; font-size: 18px;">${Math.round(totalCost)}₽</strong></div>
+                </div>
+            </div>
+        `;
+
+        html += `
+            </body>
+            </html>
+        `;
+
+        printWindow.document.write(html);
+        printWindow.document.close();
+        
+        // Wait for content to load then print
+        setTimeout(() => {
+            printWindow.print();
+            printWindow.close();
+        }, 250);
     }
 
     copySchedule() {
